@@ -12,205 +12,209 @@
 <meta property="og:type" content="website">
 <link rel="canonical" href="https://www.meskhathossain.com/">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#0a0f17">
+<meta name="theme-color" content="#ffffff">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=Hind+Siliguri:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Hind+Siliguri:wght@400;500;600&display=swap" rel="stylesheet">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Person","name":"Meskhat Hossain","url":"https://www.meskhathossain.com","image":"https://www.meskhathossain.com/meskhat.jpg","jobTitle":"Content Creator","sameAs":["https://www.youtube.com/@TheHumanChanger","https://www.instagram.com/meskhat_hossain","https://www.facebook.com/meskhat.hossain","https://www.facebook.com/1677321195702976"]}
 </script>
 <style>
   :root{
-    --bg:#0a0f17; --bg-2:#0f1621; --card:#121b28; --card-2:#172233;
-    --line:rgba(255,255,255,.08); --line-2:rgba(255,255,255,.14);
-    --text:#eef2f7; --muted:#93a1b5; --dim:#64748b;
-    --accent:#ff4d3d; --accent-2:#ff7a59; --green:#2fbf8f;
-    --radius:22px; --max:1200px;
-    --serif:"Instrument Serif",Georgia,serif;
+    --ink:#1a1a1f; --ink-2:#3a3a44; --muted:#6b6b76; --line:#ececef;
+    --bg:#ffffff; --soft:#faf7f5; --red:#c8281c; --red-soft:#f2c9c4; --blush:#fbe9e6;
+    --green:#0f6b4f; --green-soft:#d8ece4; --gold:#f4d9a6;
+    --display:"Anton",Impact,"Arial Narrow",sans-serif;
+    --serif:"Fraunces",Georgia,serif;
+    --max:1200px; --radius:22px;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
-  body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-  body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.035;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
-  main,header,footer{position:relative;z-index:1}
-  .bn{font-family:"Hind Siliguri",Inter,sans-serif}
+  body{font-family:var(--serif);font-optical-sizing:auto;background:var(--bg);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;font-size:17px}
+  .bn{font-family:"Hind Siliguri",var(--serif)}
   a{color:inherit;text-decoration:none}
   img{max-width:100%;height:auto;display:block}
   .wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
-  section{padding:120px 0}
-  .label{display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
-  .label::before{content:"";width:22px;height:1px;background:var(--accent)}
-  h1,h2,h3{font-weight:600;letter-spacing:-.03em;line-height:1.05}
-  h2{font-size:clamp(36px,5.2vw,64px);margin:18px 0 0}
-  h2 em,h1 em{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing:-.01em;color:var(--accent-2)}
-  .muted{color:var(--muted)}
-  .btn{display:inline-flex;align-items:center;gap:10px;padding:15px 24px;border-radius:999px;font-weight:600;font-size:15px;transition:transform .2s,background .2s,border-color .2s,color .2s;white-space:nowrap}
+  section{padding:120px 0;position:relative}
+  .display{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:-.01em;line-height:.98}
+  h2.display{font-size:clamp(40px,6vw,76px)}
+  .fade{color:var(--red-soft)}
+  .eyebrow{font-style:italic;color:var(--ink-2);font-size:16px;display:inline-flex;align-items:center;gap:10px}
+  .eyebrow::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--red)}
+  .label{font-family:var(--display);text-transform:uppercase;letter-spacing:.06em;font-size:15px;color:var(--red)}
+  .lead{font-size:clamp(17px,1.5vw,19px);color:var(--ink-2);max-width:620px}
+  .btn{display:inline-flex;align-items:center;gap:12px;padding:16px 26px;border-radius:999px;font:500 16px var(--serif);transition:transform .2s,background .2s,color .2s,box-shadow .2s;white-space:nowrap}
   .btn:hover{transform:translateY(-2px)}
-  .btn-accent{background:var(--accent);color:#fff}
-  .btn-accent:hover{background:#ff6352}
-  .btn-line{border:1px solid var(--line-2);color:var(--text)}
-  .btn-line:hover{border-color:var(--text)}
-  .btn svg{width:17px;height:17px}
+  .btn-solid{background:var(--ink);color:#fff;padding:9px 26px 9px 9px;box-shadow:0 12px 28px rgba(26,26,31,.18)}
+  .btn-solid:hover{background:#000}
+  .btn-solid img{width:40px;height:40px;border-radius:50%;object-fit:cover;object-position:78% 30%;border:2px solid rgba(255,255,255,.25)}
+  .btn-outline{border:1.5px solid var(--ink);color:var(--ink)}
+  .btn-outline:hover{background:var(--ink);color:#fff}
+  .btn-red{background:var(--red);color:#fff}
+  .btn-red:hover{background:#a91f15}
+  .arrow{transition:transform .2s}
+  .btn:hover .arrow{transform:translateX(4px)}
+
+  /* blobs */
+  .blob{position:absolute;border-radius:50%;filter:blur(2px);pointer-events:none;z-index:0;animation:float 12s ease-in-out infinite}
+  @keyframes float{50%{transform:translate(18px,-22px)}}
 
   /* nav */
-  header{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .3s,border-color .3s;border-bottom:1px solid transparent}
-  header.scrolled{background:rgba(10,15,23,.78);backdrop-filter:blur(14px);border-color:var(--line)}
-  .nav{display:flex;align-items:center;justify-content:space-between;height:76px}
-  .logo{display:flex;align-items:center;gap:12px;font-weight:600;font-size:16px}
-  .logo-mark{width:38px;height:38px;border-radius:12px;border:1px solid var(--line-2);display:grid;place-items:center;font-family:var(--serif);font-size:20px;font-style:italic}
-  .nav-links{display:flex;gap:6px;padding:6px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.02)}
-  .nav-links a{padding:8px 16px;border-radius:999px;font-size:14px;color:var(--muted);transition:color .2s,background .2s}
-  .nav-links a:hover{color:var(--text);background:rgba(255,255,255,.05)}
-  .nav .btn{padding:11px 20px;font-size:14px}
-  .menu-btn{display:none;background:none;border:1px solid var(--line-2);border-radius:12px;width:44px;height:44px;cursor:pointer;color:var(--text)}
-  .menu-btn span{display:block;width:18px;height:1.5px;background:currentColor;margin:4px auto}
+  header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.88);backdrop-filter:blur(12px);border-bottom:1px solid transparent;transition:border-color .3s}
+  header.scrolled{border-color:var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:78px}
+  .logo{display:flex;align-items:center;gap:12px;font-family:var(--display);text-transform:uppercase;font-size:19px;letter-spacing:.02em}
+  .logo-mark{width:36px;height:36px;border-radius:50%;background:var(--red);color:#fff;display:grid;place-items:center;font-size:17px}
+  .nav-links{display:flex;gap:34px;font-size:16px}
+  .nav-links a{position:relative;color:var(--ink-2)}
+  .nav-links a::after{content:"";position:absolute;left:0;right:100%;bottom:-4px;height:1.5px;background:var(--red);transition:right .25s}
+  .nav-links a:hover{color:var(--ink)}
+  .nav-links a:hover::after{right:0}
+  .nav .btn{padding:11px 22px;font-size:15px}
+  .menu-btn{display:none;background:none;border:0;cursor:pointer;padding:8px}
+  .menu-btn span{display:block;width:24px;height:2px;background:var(--ink);margin:5px 0;border-radius:2px}
 
   /* hero */
-  .hero{padding:150px 0 80px;position:relative;overflow:hidden}
-  .hero::after{content:"";position:absolute;width:780px;height:780px;right:-260px;top:-260px;border-radius:50%;background:radial-gradient(circle,rgba(255,77,61,.18),transparent 65%);pointer-events:none}
-  .hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:64px;align-items:end;position:relative;z-index:1}
-  .status{display:inline-flex;align-items:center;gap:10px;padding:8px 16px 8px 12px;border:1px solid var(--line-2);border-radius:999px;font-size:13px;color:var(--muted)}
-  .status i{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 0 4px rgba(47,191,143,.18);animation:pulse 2s infinite}
-  @keyframes pulse{50%{box-shadow:0 0 0 8px rgba(47,191,143,0)}}
-  .hero h1{font-size:clamp(52px,9vw,120px);margin:28px 0 26px}
-  .hero h1 .line{display:block}
-  .hero p.intro{font-size:clamp(18px,1.6vw,21px);color:var(--muted);max-width:560px}
-  .hero p.intro b{color:var(--text);font-weight:500}
-  .hero .bn-sub{margin-top:12px;color:var(--dim);font-size:17px}
-  .hero-ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:36px}
-  .portrait{position:relative;border-radius:28px;overflow:hidden;border:1px solid var(--line-2);aspect-ratio:4/5}
-  .portrait img{width:100%;height:100%;object-fit:cover;object-position:76% center;filter:saturate(1.05)}
-  .portrait::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(10,15,23,.85))}
-  .portrait figcaption{position:absolute;left:20px;right:20px;bottom:18px;z-index:2;display:flex;justify-content:space-between;align-items:flex-end;font-size:13px}
-  .portrait figcaption b{display:block;font-size:15px;font-weight:600}
-  .portrait figcaption span{color:#c9d3e0}
-  .flag{font-size:22px}
-
-  .stats{display:grid;grid-template-columns:repeat(4,1fr);margin-top:80px;border-top:1px solid var(--line);position:relative;z-index:1}
-  .stat{padding:28px 0 0}
-  .stat b{display:block;font-size:clamp(34px,4vw,52px);font-weight:600;letter-spacing:-.04em;line-height:1}
-  .stat b sup{font-size:.5em;color:var(--accent);vertical-align:top;margin-left:2px}
-  .stat span{display:block;margin-top:10px;color:var(--muted);font-size:14px}
+  .hero{padding:110px 0 70px;text-align:center;overflow:hidden}
+  .hero .wrap{position:relative;z-index:1}
+  .hero h1{font-size:clamp(56px,10vw,132px);margin:26px auto 30px;max-width:1000px}
+  .hero .lead{margin:0 auto}
+  .hero .bn{color:var(--muted);margin-top:10px;font-size:17px}
+  .hero-ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:40px}
 
   /* marquee */
-  .marquee{border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;padding:22px 0;background:var(--bg-2)}
-  .track{display:flex;gap:48px;width:max-content;animation:scroll 38s linear infinite}
-  .track span{font-family:var(--serif);font-size:clamp(26px,3vw,38px);white-space:nowrap;color:#d6dde8;display:flex;align-items:center;gap:48px}
-  .track span::after{content:"✦";font-family:Inter;font-size:16px;color:var(--accent)}
+  .marquee{overflow:hidden;padding:30px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);position:relative}
+  .marquee::before,.marquee::after{content:"";position:absolute;top:0;bottom:0;width:120px;z-index:2}
+  .marquee::before{left:0;background:linear-gradient(90deg,#fff,transparent)}
+  .marquee::after{right:0;background:linear-gradient(-90deg,#fff,transparent)}
+  .track{display:flex;width:max-content;animation:scroll 40s linear infinite}
+  .track span{font-family:var(--display);text-transform:uppercase;font-size:clamp(24px,2.6vw,34px);color:var(--ink);white-space:nowrap;display:flex;align-items:center}
+  .track span::after{content:"";width:10px;height:10px;border-radius:50%;background:var(--red);margin:0 44px}
+  .track span:nth-child(even){color:transparent;-webkit-text-stroke:1.2px var(--ink)}
   @keyframes scroll{to{transform:translateX(-50%)}}
+
+  /* intro / about split */
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+  .split>*{min-width:0}
+  .photo{position:relative}
+  .photo img{border-radius:28px;aspect-ratio:4/5;object-fit:cover;object-position:76% center;width:100%}
+  .photo .tagline{position:absolute;left:-24px;bottom:40px;background:#fff;border-radius:18px;padding:16px 20px;box-shadow:0 18px 40px rgba(26,26,31,.12);font-style:italic;font-size:15px;display:flex;gap:12px;align-items:center}
+  .photo .tagline b{font-family:var(--display);font-style:normal;font-size:26px;color:var(--red);font-weight:400}
+  .split h2{margin:16px 0 24px}
+  .split p{color:var(--ink-2);margin-bottom:18px}
+  .counters{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin:36px 0 36px;padding-top:30px;border-top:1px solid var(--line)}
+  .counter b{display:block;font-family:var(--display);font-weight:400;font-size:clamp(40px,4.4vw,58px);line-height:1}
+  .counter span{color:var(--muted);font-size:15px;font-style:italic}
+
+  /* pillars */
+  .pillars{background:var(--soft)}
+  .pillar-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:56px}
+  .pillar{background:#fff;border-radius:var(--radius);padding:36px 32px;border:1px solid var(--line);transition:transform .3s,box-shadow .3s}
+  .pillar:hover{transform:translateY(-6px);box-shadow:0 22px 50px rgba(26,26,31,.08)}
+  .pillar .num{font-family:var(--display);font-size:56px;line-height:1;color:var(--red-soft)}
+  .pillar h3{font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:26px;letter-spacing:.005em;margin:18px 0 10px;line-height:1.1}
+  .pillar p{color:var(--ink-2);font-size:16px}
+  .pillar .bn{color:var(--muted);font-size:15px;margin-top:10px}
+  .topics{display:flex;flex-wrap:wrap;gap:10px;margin-top:40px;justify-content:center}
+  .topic{padding:8px 18px;border-radius:999px;border:1px solid var(--line);background:#fff;font-style:italic;font-size:15px;color:var(--ink-2)}
 
   /* work */
   .head{display:flex;justify-content:space-between;align-items:flex-end;gap:28px;flex-wrap:wrap}
-  .head p{max-width:420px}
-  .filters{display:flex;gap:8px;flex-wrap:wrap;margin:48px 0 28px}
-  .chip{padding:9px 18px;border-radius:999px;border:1px solid var(--line-2);background:none;color:var(--muted);font:500 14px Inter,sans-serif;cursor:pointer;transition:all .2s}
-  .chip:hover{color:var(--text);border-color:var(--text)}
-  .chip.active{background:var(--text);color:var(--bg);border-color:var(--text)}
-  .work-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:20px}
-  .work{grid-column:span 2;position:relative;border-radius:var(--radius);overflow:hidden;background:var(--card);border:1px solid var(--line);transition:transform .35s,border-color .35s,opacity .3s}
-  .work:hover{transform:translateY(-6px);border-color:var(--line-2)}
-  .work.feature{grid-column:span 4;grid-row:span 2}
-  .work.wide{grid-column:span 2}
+  .head .lead{max-width:420px}
+  .filters{display:flex;gap:10px;flex-wrap:wrap;margin:44px 0 30px}
+  .chip{padding:10px 20px;border-radius:999px;border:1.5px solid var(--line);background:#fff;color:var(--ink-2);font:500 15px var(--serif);cursor:pointer;transition:all .2s}
+  .chip:hover{border-color:var(--ink)}
+  .chip.active{background:var(--ink);border-color:var(--ink);color:#fff}
+  .work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .work-grid>*{min-width:0}
+  .work{border-radius:var(--radius);overflow:hidden;background:#fff;border:1px solid var(--line);transition:transform .3s,box-shadow .3s}
+  .work:hover{transform:translateY(-6px);box-shadow:0 22px 50px rgba(26,26,31,.1)}
+  .work.feature{grid-column:span 2;grid-row:span 2;display:flex;flex-direction:column}
+  .work.feature .thumb{flex:1;aspect-ratio:auto;min-height:320px}
   .work.hide{display:none}
-  .work .thumb{position:relative;aspect-ratio:16/9;overflow:hidden;background:#1b2636}
-  .work.feature .thumb{aspect-ratio:auto;height:100%;min-height:420px;position:absolute;inset:0}
-  .work .thumb img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+  .thumb{position:relative;aspect-ratio:16/9;overflow:hidden;background:#eee}
+  .thumb img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
   .work:hover .thumb img{transform:scale(1.05)}
-  .work.feature .thumb::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,15,23,0) 30%,rgba(10,15,23,.92))}
-  .work .meta{padding:18px 20px 22px}
-  .work.feature .meta{position:absolute;left:0;right:0;bottom:0;padding:32px;z-index:2}
-  .work .tag{display:inline-block;font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-2);margin-bottom:8px}
-  .work h3{font-size:17px;font-weight:600;letter-spacing:-.01em;line-height:1.35}
-  .work.feature h3{font-size:clamp(24px,3vw,36px);letter-spacing:-.02em;line-height:1.15;max-width:560px}
-  .work .bn{color:var(--muted);font-size:14px;margin-top:6px}
-  .work .views{position:absolute;top:14px;right:14px;z-index:3;background:rgba(10,15,23,.75);backdrop-filter:blur(8px);border:1px solid var(--line-2);font-size:12px;font-weight:600;padding:5px 11px;border-radius:999px}
-  .work .play{position:absolute;top:14px;left:14px;z-index:3;width:38px;height:38px;border-radius:50%;background:var(--accent);display:grid;place-items:center;opacity:0;transform:scale(.8);transition:all .3s}
+  .views{position:absolute;right:14px;top:14px;background:#fff;color:var(--ink);font-size:13px;font-weight:600;padding:5px 12px;border-radius:999px;box-shadow:0 4px 14px rgba(0,0,0,.15)}
+  .play{position:absolute;left:50%;top:50%;width:64px;height:64px;margin:-32px 0 0 -32px;border-radius:50%;background:rgba(255,255,255,.95);display:grid;place-items:center;transform:scale(.85);opacity:0;transition:all .3s;box-shadow:0 10px 30px rgba(0,0,0,.25)}
   .work:hover .play{opacity:1;transform:none}
-  .work .play svg{width:15px;height:15px;margin-left:2px}
-  .work-cta{display:flex;justify-content:center;margin-top:44px}
-
-  /* about */
-  .about{background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-  .about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:80px;align-items:start}
-  .about-lead{font-size:clamp(22px,2.4vw,30px);line-height:1.4;letter-spacing:-.01em;margin-top:28px;color:#dfe5ee}
-  .about-lead em{font-family:var(--serif);font-style:italic;color:var(--accent-2)}
-  .about-body p{color:var(--muted);font-size:17px;margin-bottom:18px}
-  .about-body p b{color:var(--text);font-weight:500}
-  .skills{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:34px}
-  .skill{padding:22px;border:1px solid var(--line);border-radius:18px;background:var(--card)}
-  .skill .n{font-family:var(--serif);font-style:italic;color:var(--accent-2);font-size:22px;line-height:1}
-  .skill h3{font-size:16px;margin:12px 0 6px;letter-spacing:-.01em}
-  .skill p{font-size:14px;color:var(--muted);margin:0}
+  .play svg{width:22px;height:22px;margin-left:3px;fill:var(--red)}
+  .meta{padding:20px 22px 24px}
+  .meta .tag{font-family:var(--display);text-transform:uppercase;letter-spacing:.06em;font-size:13px;color:var(--red)}
+  .meta h3{font-weight:500;font-size:18px;line-height:1.35;margin-top:6px;letter-spacing:-.005em}
+  .work.feature .meta h3{font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:clamp(26px,3vw,38px);line-height:1.05}
+  .meta .bn{color:var(--muted);font-size:14px;margin-top:6px}
+  .work-cta{display:flex;justify-content:center;margin-top:48px}
 
   /* journey */
-  .journey{display:grid;grid-template-columns:repeat(4,1fr);margin-top:60px;border-top:1px solid var(--line)}
-  .step{padding:30px 28px 0 0;position:relative}
-  .step::before{content:"";position:absolute;top:-6px;left:0;width:11px;height:11px;border-radius:50%;background:var(--bg);border:2px solid var(--accent)}
-  .step .yr{font-family:var(--serif);font-size:30px;font-style:italic;color:var(--text)}
-  .step h3{font-size:17px;margin:10px 0 8px;letter-spacing:-.01em}
-  .step p{color:var(--muted);font-size:15px}
+  .journey-wrap{background:var(--ink);color:#fff;border-radius:36px;padding:90px 64px;position:relative;overflow:hidden}
+  .journey-wrap .label{color:#ff8a7e}
+  .journey-wrap h2 .fade{color:#5a5a66}
+  .journey{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;margin-top:60px;position:relative;z-index:1}
+  .step{border-top:1px solid rgba(255,255,255,.18);padding-top:26px}
+  .step .when{font-family:var(--display);font-size:34px;text-transform:uppercase;line-height:1;color:#fff}
+  .step h3{font-weight:500;font-size:18px;margin:14px 0 8px}
+  .step p{color:#b7b7c2;font-size:15px}
 
   /* collab */
-  .collab-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:56px}
-  .collab{padding:30px 26px;border-radius:var(--radius);border:1px solid var(--line);background:linear-gradient(180deg,var(--card),var(--bg));transition:border-color .3s,transform .3s}
-  .collab:hover{border-color:rgba(255,77,61,.45);transform:translateY(-4px)}
-  .collab .ic{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;background:rgba(255,77,61,.12);color:var(--accent-2);margin-bottom:22px}
+  .collab-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:56px}
+  .collab{padding:32px 26px;border-radius:var(--radius);border:1px solid var(--line);transition:all .3s;background:#fff}
+  .collab:hover{border-color:var(--red);transform:translateY(-4px)}
+  .collab .ic{width:50px;height:50px;border-radius:50%;display:grid;place-items:center;background:var(--blush);color:var(--red);margin-bottom:22px}
   .collab .ic svg{width:22px;height:22px}
-  .collab h3{font-size:18px;margin-bottom:10px;letter-spacing:-.01em}
-  .collab p{color:var(--muted);font-size:15px}
+  .collab h3{font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:22px;line-height:1.1;margin-bottom:10px}
+  .collab p{color:var(--ink-2);font-size:15.5px}
 
   /* contact */
-  .contact{padding:40px 0 120px}
-  .contact-box{position:relative;overflow:hidden;border-radius:32px;border:1px solid var(--line-2);padding:90px 64px;text-align:center;background:radial-gradient(700px 360px at 50% 0%,rgba(255,77,61,.22),transparent 70%),var(--bg-2)}
-  .contact-box h2{font-size:clamp(40px,6.5vw,88px);margin:22px auto 22px;max-width:900px}
-  .contact-box p{color:var(--muted);font-size:18px;max-width:560px;margin:0 auto 40px}
+  .contact{text-align:center;overflow:hidden;padding:140px 0}
+  .contact .wrap{position:relative;z-index:1}
+  .contact h2{font-size:clamp(52px,9vw,120px);margin:18px 0 24px}
+  .contact .lead{margin:0 auto 42px}
   .socials{display:flex;justify-content:center;flex-wrap:wrap;gap:12px}
-  .social{display:flex;align-items:center;gap:10px;padding:14px 22px;border-radius:999px;border:1px solid var(--line-2);font-weight:500;font-size:15px;transition:all .2s;background:rgba(255,255,255,.02)}
-  .social:hover{background:var(--text);color:var(--bg);border-color:var(--text)}
+  .social{display:flex;align-items:center;gap:10px;padding:14px 24px;border-radius:999px;border:1.5px solid var(--ink);font-weight:500;transition:all .2s}
+  .social:hover{background:var(--ink);color:#fff}
   .social svg{width:18px;height:18px}
 
-  footer{border-top:1px solid var(--line);padding:34px 0;color:var(--dim);font-size:14px}
+  footer{border-top:1px solid var(--line);padding:34px 0;color:var(--muted);font-size:15px}
   .foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   .foot a{text-decoration:underline;text-underline-offset:3px}
 
-  .reveal{opacity:0;transform:translateY(28px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
   .reveal.in{opacity:1;transform:none}
-  @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.track{animation:none}html{scroll-behavior:auto}}
-
-  .hero-grid>*,.about-grid>*,.work-grid>*{min-width:0}
+  @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.track,.blob{animation:none}html{scroll-behavior:auto}}
 
   @media (max-width:1024px){
     .work-grid{grid-template-columns:repeat(2,1fr)}
-    .work,.work.wide{grid-column:span 1}
-    .work.feature{grid-column:span 2;grid-row:auto}
-    .work.feature .thumb{min-height:380px;position:relative}
-    .work.feature{min-height:380px}
     .collab-grid{grid-template-columns:repeat(2,1fr)}
-    .about-grid{gap:48px}
+    .split{gap:52px}
   }
   @media (max-width:860px){
     section{padding:88px 0}
     .nav-links,.nav .btn{display:none}
     .menu-btn{display:block}
-    .nav-links.open{display:flex;flex-direction:column;position:absolute;top:76px;left:16px;right:16px;border-radius:20px;background:rgba(15,22,33,.97);padding:12px;gap:2px}
-    .nav-links.open a{padding:14px 16px;font-size:16px}
-    .hero{padding:120px 0 64px}
-    .hero-grid,.about-grid{grid-template-columns:minmax(0,1fr);gap:44px}
-    .portrait{max-width:420px;aspect-ratio:1/1}
-    .stats{grid-template-columns:repeat(2,1fr);row-gap:8px;margin-top:56px}
-    .journey{grid-template-columns:repeat(2,1fr);row-gap:40px}
+    .nav-links.open{display:flex;flex-direction:column;position:absolute;top:78px;left:0;right:0;background:#fff;padding:22px 28px;gap:20px;border-bottom:1px solid var(--line);font-size:18px}
+    .hero{padding:80px 0 56px}
+    .split{grid-template-columns:minmax(0,1fr)}
+    .photo{max-width:440px}
+    .photo img{aspect-ratio:1/1}
+    .pillar-grid{grid-template-columns:minmax(0,1fr)}
+    .journey{grid-template-columns:repeat(2,1fr);row-gap:36px}
+    .journey-wrap{padding:64px 32px;border-radius:28px}
   }
   @media (max-width:600px){
     .wrap{padding:0 16px}
-    .work-grid{grid-template-columns:minmax(0,1fr)}
-    .work.feature{grid-column:span 1;min-height:340px}
-    .work.feature .thumb{min-height:340px}
-    .work.feature .meta{padding:22px}
-    .collab-grid,.skills{grid-template-columns:minmax(0,1fr)}
-    .journey{grid-template-columns:minmax(0,1fr)}
-    .contact-box{padding:64px 22px;border-radius:24px}
-    .work .play{opacity:1;transform:none}
+    .work-grid,.collab-grid,.journey{grid-template-columns:minmax(0,1fr)}
+    .work.feature{grid-column:span 1;grid-row:auto}
+    .work.feature .thumb{min-height:0;aspect-ratio:16/9;flex:none}
+    .photo .tagline{left:12px;bottom:16px}
+    .counters{grid-template-columns:repeat(3,1fr);gap:12px}
+    .journey-wrap{padding:52px 22px;border-radius:22px}
+    .play{opacity:1;transform:scale(.8)}
+    .btn-solid{padding-right:20px}
+    .hero h1{font-size:46px}
+    .blob{transform:scale(.45);opacity:.7;animation:none}
+    .contact h2{font-size:48px}
   }
 </style>
 </head>
@@ -220,13 +224,12 @@
   <div class="wrap nav">
     <a href="#" class="logo" aria-label="Meskhat Hossain, home"><span class="logo-mark">M</span>Meskhat Hossain</a>
     <nav class="nav-links" id="navLinks">
-      <a href="#work">Work</a>
       <a href="#about">About</a>
+      <a href="#work">Work</a>
       <a href="#journey">Journey</a>
       <a href="#collaborate">Collaborate</a>
-      <a href="#contact">Contact</a>
     </nav>
-    <a class="btn btn-accent" href="#contact">Let's talk</a>
+    <a class="btn btn-outline" href="#contact">Let's talk <span class="arrow">→</span></a>
     <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
 </header>
@@ -234,32 +237,17 @@
 <main>
   <!-- HERO -->
   <section class="hero">
+    <span class="blob" style="width:240px;height:240px;background:var(--blush);right:6%;top:40px"></span>
+    <span class="blob" style="width:90px;height:90px;background:var(--gold);right:4%;top:58%;animation-delay:-4s"></span>
+    <span class="blob" style="width:150px;height:150px;background:var(--green-soft);left:5%;bottom:60px;animation-delay:-7s"></span>
     <div class="wrap">
-      <div class="hero-grid">
-        <div class="reveal">
-          <span class="status"><i></i>Creator of The Human Changer · Based in Canada</span>
-          <h1><span class="line">Meskhat</span><span class="line"><em>Hossain</em></span></h1>
-          <p class="intro">Content creator and student mentor. I tell <b>honest, first-hand stories</b> that help Bangladeshi students study, work and build a life in Canada.</p>
-          <p class="bn bn-sub">কানাডায় পড়াশোনা, জব আর জীবনের বাস্তব গল্প, বাংলায়।</p>
-          <div class="hero-ctas">
-            <a class="btn btn-accent" href="#work">View my work
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-            <a class="btn btn-line" href="https://www.youtube.com/@TheHumanChanger?sub_confirmation=1" target="_blank" rel="noopener">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4L15.8 12l-6.2 3.6z"/></svg>
-              Subscribe</a>
-          </div>
-        </div>
-        <figure class="portrait reveal">
-          <img src="meskhat.jpg" alt="Meskhat Hossain on a ferry beside a Canadian flag" width="800" height="800">
-          <figcaption><div><b>Meskhat Hossain</b><span>Bangladesh → Canada</span></div><span class="flag">🇧🇩 🇨🇦</span></figcaption>
-        </figure>
-      </div>
-
-      <div class="stats reveal">
-        <div class="stat"><b data-count="32" data-suffix="K">0</b><span>YouTube subscribers</span></div>
-        <div class="stat"><b data-count="128">0</b><span>Videos published</span></div>
-        <div class="stat"><b data-count="620" data-suffix="K">0</b><span>Views on my top 10 videos</span></div>
-        <div class="stat"><b data-count="2021" data-plain="1">2021</b><span>Creating since</span></div>
+      <span class="eyebrow reveal">Bangladesh → Canada · Creating since 2021</span>
+      <h1 class="display reveal">Real stories for<br>students building<br><span class="fade">a life in Canada</span></h1>
+      <p class="lead reveal">I'm Meskhat Hossain, creator of <em>The Human Changer</em>. I share honest, first-hand guidance on studying, working and settling in Canada, in Bangla.</p>
+      <p class="bn reveal">কানাডায় পড়াশোনা, জব আর জীবনের বাস্তব গল্প।</p>
+      <div class="hero-ctas reveal">
+        <a class="btn btn-solid" href="https://www.youtube.com/@TheHumanChanger?sub_confirmation=1" target="_blank" rel="noopener"><img src="meskhat.jpg" alt="" width="40" height="40">Subscribe on YouTube <span class="arrow">→</span></a>
+        <a class="btn btn-outline" href="#work">See my work <span class="arrow">→</span></a>
       </div>
     </div>
   </section>
@@ -272,17 +260,57 @@
     </div>
   </div>
 
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="wrap split">
+      <figure class="photo reveal">
+        <img src="meskhat.jpg" alt="Meskhat Hossain on a ferry beside a Canadian flag" width="800" height="800">
+        <figcaption class="tagline"><b>32K+</b>students &amp; families<br>follow the journey</figcaption>
+      </figure>
+      <div class="reveal">
+        <span class="label">About me</span>
+        <h2 class="display">I learned it the hard way, <span class="fade">so you don't have to.</span></h2>
+        <p>I came to Canada from Bangladesh as an international student. Finding work, finding a place to live, learning to cook, missing family, and still keeping up with classes. None of it was easy.</p>
+        <p>In 2021 I started <b>The Human Changer</b> to share what I was going through, honestly and in Bangla. Today it's a community of students and families who use my videos to plan one of the biggest decisions of their lives.</p>
+        <div class="counters">
+          <div class="counter"><b data-count="32" data-suffix="K+">0</b><span>Subscribers</span></div>
+          <div class="counter"><b data-count="128">0</b><span>Videos</span></div>
+          <div class="counter"><b data-count="620" data-suffix="K+">0</b><span>Views, top 10 videos</span></div>
+        </div>
+        <a class="btn btn-outline" href="#journey">My journey <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PILLARS -->
+  <section class="pillars">
+    <div class="wrap">
+      <div class="reveal" style="text-align:center">
+        <span class="label">What I share</span>
+        <h2 class="display" style="margin-top:14px">Everything I wish <span class="fade">I knew before.</span></h2>
+      </div>
+      <div class="pillar-grid">
+        <div class="pillar reveal"><span class="num">01</span><h3>Study smart</h3><p>Affordable colleges and universities, intakes, and what your first semester is really like.</p><p class="bn">কানাডায় পড়াশোনা</p></div>
+        <div class="pillar reveal"><span class="num">02</span><h3>Work &amp; money</h3><p>Getting your first job, how much money you really need, and managing costs as a student.</p><p class="bn">জব ও খরচ</p></div>
+        <div class="pillar reveal"><span class="num">03</span><h3>Visas &amp; life</h3><p>Study permits, refusals, PGWP and visitor visas, plus housing, winter and staying motivated.</p><p class="bn">ভিসা ও কানাডার জীবন</p></div>
+      </div>
+      <div class="topics reveal">
+        <span class="topic">Study permits</span><span class="topic">IELTS prep</span><span class="topic">Cheapest universities</span><span class="topic">First job</span><span class="topic">PGWP</span><span class="topic">Cost of living</span><span class="topic">Buying a car</span><span class="topic">Winter semester</span><span class="topic">Visitor visa</span>
+      </div>
+    </div>
+  </section>
+
   <!-- WORK -->
   <section id="work">
     <div class="wrap">
       <div class="head reveal">
         <div>
           <span class="label">Selected work</span>
-          <h2>Stories that <em>students</em><br>actually watch.</h2>
+          <h2 class="display" style="margin-top:14px">Stories students <span class="fade">actually watch.</span></h2>
         </div>
-        <p class="muted">A selection of my most-watched videos on YouTube, from emotional personal stories to practical guides on money, jobs and visas.</p>
+        <p class="lead">My most-watched videos, from emotional personal stories to practical guides on money, jobs and visas.</p>
       </div>
-      <div class="filters reveal" role="tablist" aria-label="Filter videos">
+      <div class="filters reveal" aria-label="Filter videos">
         <button class="chip active" data-f="all">All</button>
         <button class="chip" data-f="story">Personal stories</button>
         <button class="chip" data-f="study">Study &amp; money</button>
@@ -290,44 +318,24 @@
       </div>
       <div class="work-grid" id="workGrid"></div>
       <div class="work-cta reveal">
-        <a class="btn btn-line" href="https://www.youtube.com/@TheHumanChanger/videos" target="_blank" rel="noopener">See all 128 videos on YouTube
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section id="about" class="about">
-    <div class="wrap about-grid">
-      <div class="reveal">
-        <span class="label">About</span>
-        <p class="about-lead">I came to Canada as an international student and learned everything <em>the hard way</em>. Now I share it, so the next student doesn't have to.</p>
-      </div>
-      <div class="about-body reveal">
-        <p>Being an international student is tough. You're looking for work, finding a place to live, learning to cook, missing family, and still trying to keep up with classes, all while competing with people who have far more experience.</p>
-        <p>In 2021 I started <b>The Human Changer</b> to share what I was going through, honestly and in Bangla. It has grown into a community of <b>32,000+ subscribers</b> who use my videos to plan one of the biggest decisions of their lives.</p>
-        <div class="skills">
-          <div class="skill"><span class="n">01</span><h3>Video storytelling</h3><p>Turning real experiences into videos people watch to the end.</p></div>
-          <div class="skill"><span class="n">02</span><h3>Bilingual content</h3><p>Clear communication in Bangla and English.</p></div>
-          <div class="skill"><span class="n">03</span><h3>First-hand research</h3><p>Advice based on what I've lived through, not sales pitches.</p></div>
-          <div class="skill"><span class="n">04</span><h3>Community building</h3><p>A loyal audience of students and families planning their move.</p></div>
-        </div>
+        <a class="btn btn-outline" href="https://www.youtube.com/@TheHumanChanger/videos" target="_blank" rel="noopener">All 128 videos on YouTube <span class="arrow">→</span></a>
       </div>
     </div>
   </section>
 
   <!-- JOURNEY -->
-  <section id="journey">
+  <section id="journey" style="padding-top:0">
     <div class="wrap">
-      <div class="reveal">
+      <div class="journey-wrap reveal">
+        <span class="blob" style="width:320px;height:320px;background:rgba(200,40,28,.35);right:-90px;top:-110px;filter:blur(40px)"></span>
         <span class="label">Journey</span>
-        <h2>From student to <em>storyteller.</em></h2>
-      </div>
-      <div class="journey reveal">
-        <div class="step"><span class="yr">Toronto</span><h3>Arrived in Canada</h3><p>Started life as an international student from Bangladesh.</p></div>
-        <div class="step"><span class="yr">2021</span><h3>Launched The Human Changer</h3><p>Began sharing the real student experience on YouTube.</p></div>
-        <div class="step"><span class="yr">Halifax</span><h3>Moved east, started working</h3><p>Landed a job and received my post-graduation work permit.</p></div>
-        <div class="step"><span class="yr">Today</span><h3>32K+ community</h3><p>128 videos helping students plan their move to Canada.</p></div>
+        <h2 class="display" style="margin-top:14px">From student <span class="fade">to storyteller.</span></h2>
+        <div class="journey">
+          <div class="step"><span class="when">Toronto</span><h3>Arrived in Canada</h3><p>Started life as an international student from Bangladesh.</p></div>
+          <div class="step"><span class="when">2021</span><h3>Launched The Human Changer</h3><p>Began sharing the real student experience on YouTube.</p></div>
+          <div class="step"><span class="when">Halifax</span><h3>Moved east, started working</h3><p>Landed a job and received my post-graduation work permit.</p></div>
+          <div class="step"><span class="when">Today</span><h3>A 32K+ community</h3><p>128 videos helping students plan their move to Canada.</p></div>
+        </div>
       </div>
     </div>
   </section>
@@ -338,44 +346,32 @@
       <div class="head reveal">
         <div>
           <span class="label">Collaborate</span>
-          <h2>Let's reach students <em>together.</em></h2>
+          <h2 class="display" style="margin-top:14px">Let's reach students <span class="fade">together.</span></h2>
         </div>
-        <p class="muted">I'm open to working with brands and organisations that genuinely help international students.</p>
+        <p class="lead">I'm open to working with brands and organisations that genuinely help international students.</p>
       </div>
       <div class="collab-grid">
-        <div class="collab reveal">
-          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8z"/><circle cx="7.5" cy="7.5" r="1.5"/></svg></div>
-          <h3>Brand partnerships</h3><p>Sponsored videos and integrations for student-focused products and services.</p>
-        </div>
-        <div class="collab reveal">
-          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg></div>
-          <h3>Schools &amp; colleges</h3><p>Campus features and honest program spotlights for prospective students.</p>
-        </div>
-        <div class="collab reveal">
-          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10a7 7 0 0 0 14 0M12 17v5"/></svg></div>
-          <h3>Talks &amp; workshops</h3><p>Sessions on studying, working and settling in Canada, in Bangla or English.</p>
-        </div>
-        <div class="collab reveal">
-          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2 20c1-3.5 3.8-5.5 7-5.5s6 2 7 5.5"/><circle cx="17" cy="9" r="2.5"/><path d="M17 14.5c2.4 0 4.2 1.5 5 4"/></svg></div>
-          <h3>Creator collabs</h3><p>Joint videos with creators who serve the student and newcomer community.</p>
-        </div>
+        <div class="collab reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8z"/><circle cx="7.5" cy="7.5" r="1.5"/></svg></div><h3>Brand partnerships</h3><p>Sponsored videos and integrations for student-focused products and services.</p></div>
+        <div class="collab reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg></div><h3>Schools &amp; colleges</h3><p>Campus features and honest program spotlights for prospective students.</p></div>
+        <div class="collab reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10a7 7 0 0 0 14 0M12 17v5"/></svg></div><h3>Talks &amp; workshops</h3><p>Sessions on studying, working and settling in Canada, in Bangla or English.</p></div>
+        <div class="collab reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2 20c1-3.5 3.8-5.5 7-5.5s6 2 7 5.5"/><circle cx="17" cy="9" r="2.5"/><path d="M17 14.5c2.4 0 4.2 1.5 5 4"/></svg></div><h3>Creator collabs</h3><p>Joint videos with creators who serve the student and newcomer community.</p></div>
       </div>
     </div>
   </section>
 
   <!-- CONTACT -->
   <section id="contact" class="contact">
+    <span class="blob" style="width:260px;height:260px;background:var(--blush);left:8%;top:60px"></span>
+    <span class="blob" style="width:110px;height:110px;background:var(--gold);right:12%;bottom:80px;animation-delay:-5s"></span>
     <div class="wrap">
-      <div class="contact-box reveal">
-        <span class="label">Contact</span>
-        <h2>Have an idea? <em>Let's talk.</em></h2>
-        <p>For collaborations, questions or just to say hi, send me a message on any of these platforms.</p>
-        <div class="socials">
-          <a class="social" href="https://www.youtube.com/@TheHumanChanger" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4L15.8 12l-6.2 3.6z"/></svg>YouTube</a>
-          <a class="social" href="https://www.instagram.com/meskhat_hossain" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>Instagram</a>
-          <a class="social" href="https://www.facebook.com/1677321195702976" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8V6c0-.8.6-1 1-1h3V1h-4c-3.4 0-5 2.5-5 5v2H6v4h3v11h5V12h3.5l.5-4H14z"/></svg>Facebook Page</a>
-          <a class="social" href="https://www.facebook.com/meskhat.hossain" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg>Facebook</a>
-        </div>
+      <span class="eyebrow reveal">Collaborations, questions or just hello</span>
+      <h2 class="display reveal">Let's start a<br><span class="fade">conversation.</span></h2>
+      <p class="lead reveal">Send me a message on any of these platforms. I read every one.</p>
+      <div class="socials reveal">
+        <a class="social" href="https://www.youtube.com/@TheHumanChanger" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4L15.8 12l-6.2 3.6z"/></svg>YouTube</a>
+        <a class="social" href="https://www.instagram.com/meskhat_hossain" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>Instagram</a>
+        <a class="social" href="https://www.facebook.com/1677321195702976" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8V6c0-.8.6-1 1-1h3V1h-4c-3.4 0-5 2.5-5 5v2H6v4h3v11h5V12h3.5l.5-4H14z"/></svg>Facebook Page</a>
+        <a class="social" href="https://www.facebook.com/meskhat.hossain" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg>Facebook</a>
       </div>
     </div>
   </section>
@@ -390,7 +386,7 @@
 
 <script>
   const works = [
-    {id:"2AgnPHyNEnE", f:"story",  tag:"Personal story", en:"A surprise visit home on Eid, after 2 years in Canada", bn:"আম্মুকে সারপ্রাইজ দিতে ঈদের দিন কানাডা থেকে বাংলাদেশ", v:"297K", cls:"feature"},
+    {id:"2AgnPHyNEnE", f:"story",  tag:"Personal story", en:"A surprise visit home on Eid, after 2 years in Canada", bn:"আম্মুকে সারপ্রাইজ দিতে ঈদের দিন কানাডা থেকে বাংলাদেশ", v:"297K", feature:true},
     {id:"DiFpcZWzhdI", f:"story",  tag:"Life in Canada", en:"Buying my first car in Canada", bn:"কানাডায় আমার প্রথম গাড়ি কিনলাম", v:"87K"},
     {id:"lgFk4ESi4ik", f:"study",  tag:"Study guide", en:"5 most affordable universities & colleges in Canada", bn:"কানাডায় ৫ টা ইউনিভার্সিটি যেখানে সবাই পড়তে পারবে", v:"83K"},
     {id:"ih-mXy-SseE", f:"career", tag:"Career", en:"How to get your first job in Canada", bn:"কানাডায় প্রথম জব কিভাবে পাবে?", v:"40K"},
@@ -400,45 +396,40 @@
     {id:"NS_D1R4-pWU", f:"career", tag:"Career", en:"Finally, I got a job in Halifax", bn:"কানাডায় জব পাওয়া এতো কঠিন!", v:"8.8K"},
     {id:"TvVLKyAVggs", f:"career", tag:"Visa", en:"I got my PGWP work permit in just 12 days", bn:"কানাডার WORK PERMIT পেলাম মাত্র ১২ দিনে", v:"2.9K"}
   ];
-  const play = '<span class="play"><svg viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg></span>';
   document.getElementById('workGrid').innerHTML = works.map(w => `
-    <a class="work reveal ${w.cls||''}" data-f="${w.f}" href="https://www.youtube.com/watch?v=${w.id}" target="_blank" rel="noopener">
-      ${play}<span class="views">${w.v} views</span>
-      <div class="thumb"><img src="https://i.ytimg.com/vi/${w.id}/${w.cls ? 'maxresdefault' : 'hqdefault'}.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/${w.id}/hqdefault.jpg'" alt="" loading="lazy"></div>
+    <a class="work reveal ${w.feature ? 'feature' : ''}" data-f="${w.f}" href="https://www.youtube.com/watch?v=${w.id}" target="_blank" rel="noopener">
+      <div class="thumb">
+        <img src="https://i.ytimg.com/vi/${w.id}/${w.feature ? 'maxresdefault' : 'hqdefault'}.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/${w.id}/hqdefault.jpg'" alt="" loading="lazy">
+        <span class="views">${w.v} views</span>
+        <span class="play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+      </div>
       <div class="meta"><span class="tag">${w.tag}</span><h3>${w.en}</h3><p class="bn">${w.bn}</p></div>
     </a>`).join('');
 
-  // filters
+  const featureEl = document.querySelector('.work.feature');
   document.querySelectorAll('.chip').forEach(c => c.addEventListener('click', () => {
     document.querySelectorAll('.chip').forEach(x => x.classList.toggle('active', x === c));
     const f = c.dataset.f;
-    document.querySelectorAll('.work').forEach(w => {
-      const show = f === 'all' || w.dataset.f === f;
-      w.classList.toggle('hide', !show);
-      w.classList.toggle('feature', show && f === 'all' && w === document.querySelector('.work[data-f="story"]'));
-    });
+    document.querySelectorAll('.work').forEach(w => w.classList.toggle('hide', !(f === 'all' || w.dataset.f === f)));
+    featureEl.classList.toggle('feature', f === 'all');
   }));
 
-  // header + menu
   const hdr = document.getElementById('hdr');
-  addEventListener('scroll', () => hdr.classList.toggle('scrolled', scrollY > 20), {passive:true});
+  addEventListener('scroll', () => hdr.classList.toggle('scrolled', scrollY > 10), {passive:true});
   const menuBtn = document.getElementById('menuBtn'), links = document.getElementById('navLinks');
   menuBtn.addEventListener('click', () => { const o = links.classList.toggle('open'); menuBtn.setAttribute('aria-expanded', o); });
   links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { links.classList.remove('open'); menuBtn.setAttribute('aria-expanded', false); }));
 
   document.getElementById('year').textContent = new Date().getFullYear();
 
-  // count-up
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
   function countUp(el){
-    const end = +el.dataset.count, sx = el.dataset.suffix || '', sup = el.dataset.plain ? '' : '<sup>+</sup>';
-    if (el.dataset.plain || reduce) { el.innerHTML = end + sx + sup; return; }
-    const t0 = performance.now(), dur = 1400;
+    const end = +el.dataset.count, sx = el.dataset.suffix || '';
+    if (reduce) { el.textContent = end + sx; return; }
+    const t0 = performance.now(), dur = 1500;
     (function tick(t){ const p = Math.min((t - t0) / dur, 1), e = 1 - Math.pow(1 - p, 3);
-      el.innerHTML = Math.round(end * e) + sx + sup; if (p < 1) requestAnimationFrame(tick); })(t0);
+      el.textContent = Math.round(end * e) + sx; if (p < 1) requestAnimationFrame(tick); })(t0);
   }
-
-  // reveal
   const io = new IntersectionObserver(es => es.forEach(e => {
     if (!e.isIntersecting) return;
     e.target.classList.add('in');
