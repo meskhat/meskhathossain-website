@@ -283,6 +283,50 @@ form.signup-form button{justify-content:center}
 .pdf-mock.dark .t span{color:#ff8a7e}
 .pdf-mock small{font-size:12px;color:var(--muted)}
 
+/* home starter kit */
+.kit-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:stretch}
+.kit-grid>*{min-width:0}
+.kit-card{border-radius:30px;padding:38px;position:relative;overflow:hidden;overflow:clip;display:flex;flex-direction:column;gap:24px}
+.kit-card>*:not(.blob){position:relative;z-index:1}
+.kit-free{background:var(--ink);color:#fff}
+.kit-guide{background:var(--blush)}
+.kit-top{display:grid;grid-template-columns:120px minmax(0,1fr);gap:24px;align-items:center}
+.kit-card h3{font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:clamp(26px,2.8vw,36px);line-height:1.02;margin:10px 0 8px}
+.kit-card p{font-size:15.5px;color:var(--ink-2)}
+.kit-free p{color:#c9c9d2}
+.kit-free .bn{color:#a9a9b5;margin-top:6px;font-size:14.5px}
+.kit-guide .bn{color:var(--muted);font-size:14.5px}
+.tagpill{display:inline-block;font-family:var(--display);text-transform:uppercase;letter-spacing:.06em;font-size:12px;padding:5px 12px;border-radius:999px}
+.tagpill.free{background:#ff8a7e;color:#16161b}
+.tagpill.guide{background:var(--ink);color:#fff}
+.mini-pdf{aspect-ratio:3/4;border-radius:10px;background:#fff;color:var(--ink);padding:12px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 18px 40px rgba(0,0,0,.35);transform:rotate(-4deg)}
+.mini-pdf.dark{background:var(--ink);color:#fff;box-shadow:0 18px 40px rgba(22,22,27,.3);transform:rotate(4deg)}
+.mp-k{font-family:var(--display);text-transform:uppercase;font-size:10px;letter-spacing:.08em;color:var(--red)}
+.mini-pdf.dark .mp-k{color:#ff8a7e}
+.mp-t{font-family:var(--display);text-transform:uppercase;font-size:17px;line-height:.98}
+.mp-t i{font-style:normal;color:var(--red-soft)}
+.mini-pdf.dark .mp-t i{color:#ff8a7e}
+form.kit-form{background:transparent;padding:0;border-radius:0;gap:12px;margin-top:auto}
+.kit-fields{display:grid;grid-template-columns:.8fr 1.2fr;gap:12px}
+.kit-fields input{background:#fff;border-color:transparent}
+.kit-free .fine{color:#8d8d99}
+.kit-free .signup-ok{margin-top:auto}
+.kit-list{list-style:none;display:grid;gap:10px}
+.kit-list li{display:flex;gap:12px;font-size:15.5px;color:var(--ink-2)}
+.kit-list li:before{content:"✓";flex:none;width:22px;height:22px;border-radius:50%;background:#fff;color:var(--red);display:grid;place-items:center;font-size:12px;font-weight:700}
+.kit-buy{margin-top:auto;padding-top:20px;border-top:1px solid rgba(22,22,27,.1);display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap}
+.kit-price b{font-family:var(--display);font-weight:400;font-size:44px;line-height:1;display:block}
+.kit-price span{font-size:12.5px;color:var(--muted);font-style:italic}
+.kit-btns{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+@media (max-width:960px){.kit-grid{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:600px){
+  .kit-card{padding:26px 20px;border-radius:24px}
+  .kit-top{grid-template-columns:84px minmax(0,1fr);gap:16px}
+  .mp-t{font-size:12px}
+  .kit-fields{grid-template-columns:minmax(0,1fr)}
+  form.kit-form button{width:100%}
+}
+
 /* product */
 .product{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:center}
 .product>*{min-width:0}

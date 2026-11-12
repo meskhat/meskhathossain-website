@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
   /* guide buy buttons */
   document.querySelectorAll('[data-buy]').forEach(a => {
     if (GUIDE_URL) { a.href = GUIDE_URL; a.target = '_blank'; a.rel = 'noopener'; }
-    else { a.href = '/free-checklist.html#signup'; a.querySelector('.buy-label') && (a.querySelector('.buy-label').textContent = 'Join the launch list'); }
+    else { if (a.dataset.buy !== 'local') a.href = '/free-checklist.html#signup'; a.querySelector('.buy-label') && (a.querySelector('.buy-label').textContent = 'Join the launch list'); }
   });
   document.querySelectorAll('[data-guide-status]').forEach(el => el.textContent = GUIDE_URL ? 'Available now · instant PDF download' : 'Launching soon · join the list for the launch price');
 
