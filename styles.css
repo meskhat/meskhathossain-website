@@ -495,6 +495,51 @@ form.kit-form{background:transparent;padding:0;border-radius:0;gap:12px;margin-t
 .tool-tile p{color:var(--ink-2);font-size:15.5px}
 .tool-tile .more{margin-top:auto;color:var(--red);font-weight:500}
 
+/* ===== Find My Professor ===== */
+.fmp-feature{display:flex;justify-content:space-between;align-items:center;gap:28px;flex-wrap:wrap;background:var(--ink);color:#fff;border-radius:24px;padding:30px 34px;margin-top:34px}
+.fmp-feature h3{font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:clamp(26px,3vw,36px);margin:10px 0 6px;line-height:1.05}
+.fmp-feature p{color:#c9c9d2;max-width:640px;font-size:15.5px}
+.fmp-feature + .grid-3{margin-top:20px}
+.sv-filters{display:grid;grid-template-columns:1fr 1.3fr 1.3fr 2fr;gap:14px;background:#fff;border:1px solid var(--line);border-radius:22px;padding:20px;box-shadow:0 14px 40px rgba(22,22,27,.06)}
+.sv-filters>*{min-width:0}
+.sv-f{display:grid;gap:6px;font-size:13.5px;font-weight:600;color:var(--ink-2)}
+.sv-f select,.sv-f input{font:15.5px var(--serif);padding:12px 14px;border:1.5px solid var(--line);border-radius:12px;background:var(--soft);width:100%;min-width:0;color:var(--ink)}
+.sv-f select:focus,.sv-f input:focus{outline:none;border-color:var(--ink);background:#fff}
+.sv-bar{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;margin:24px 0 14px;font-size:15px;color:var(--ink-2)}
+.sv-sort{display:flex;gap:8px;align-items:center;font-size:14px}
+.sv-sort select{font:14.5px var(--serif);padding:8px 10px;border:1.5px solid var(--line);border-radius:10px;background:#fff}
+.sv-list{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.sv-list>*{min-width:0}
+.sv-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:22px 24px;display:flex;flex-direction:column;gap:12px;transition:box-shadow .25s}
+.sv-card:hover{box-shadow:0 18px 40px rgba(22,22,27,.08)}
+.sv-top{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}
+.sv-card h3{font-weight:600;font-size:19px;line-height:1.25}
+.sv-uni{font-size:14px;color:var(--muted);margin-top:2px}
+.sv-uni span{color:var(--red)}
+.sv-active{flex:none;font-size:12px;background:var(--green-soft);color:var(--green);padding:4px 10px;border-radius:999px;white-space:nowrap}
+.sv-topics{display:flex;flex-wrap:wrap;gap:6px}
+.sv-topics span{font-size:12.5px;background:var(--soft);border:1px solid var(--line);border-radius:999px;padding:4px 10px;color:var(--ink-2)}
+.sv-recent summary{cursor:pointer;font-size:14px;font-weight:600;color:var(--ink)}
+.sv-recent ul{margin:8px 0 0;padding-left:18px}
+.sv-recent li{font-size:14px;color:var(--ink-2);margin-bottom:6px}
+.sv-recent a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:3px}
+.sv-recent a:hover{text-decoration-color:var(--red)}
+.sv-recent em{color:var(--muted);font-size:12.5px}
+.sv-links{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;margin-top:auto}
+.sv-links a:not(.btn){font-size:14px;color:var(--red);border-bottom:1px solid currentColor}
+.sv-btn{padding:10px 16px !important;font-size:14px !important}
+.sv-meta{font-size:12.5px;color:var(--muted);font-style:italic}
+.sv-note{margin-top:34px;background:var(--soft);border-radius:18px;padding:20px 24px;font-size:14.5px;color:var(--ink-2)}
+.sv-note a{color:var(--red);border-bottom:1px solid currentColor}
+.how-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.how-grid>*{min-width:0}
+.how{background:#fff;border:1px solid var(--line);border-radius:20px;padding:26px}
+.how .tool-n{font-size:36px}
+.how h3{font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:21px;margin:10px 0 6px;line-height:1.1}
+.how p{font-size:15px;color:var(--ink-2)}
+@media (max-width:960px){.sv-filters{grid-template-columns:1fr 1fr}.sv-list{grid-template-columns:minmax(0,1fr)}.how-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:600px){.sv-filters{grid-template-columns:minmax(0,1fr);padding:16px}.how-grid{grid-template-columns:minmax(0,1fr)}.sv-card{padding:18px}.sv-top{flex-direction:column}}
+
 /* ===== About ===== */
 .about-story{display:grid;grid-template-columns:.8fr 1.2fr;gap:64px;align-items:start}
 .about-story>*{min-width:0}

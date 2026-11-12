@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google tag (GA4) with Consent Mode: no analytics cookies until the visitor accepts -->
+<script>
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+var __c=null;try{__c=localStorage.getItem('mh_consent');}catch(e){}
+gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:__c==='granted'?'granted':'denied'});
+gtag('set','ads_data_redaction',true);
+gtag('js',new Date());
+window.addEventListener('load',function(){setTimeout(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtm.js?id=GTM-WNW99MJ5';document.head.appendChild(s);},1200);});
+</script>
+<title>Find My Professor: Supervisors for Research Master's in Canada | Meskhat Hossain</title>
+<meta name="description" content="Search active researchers at Canadian universities by field and research topic to find a supervisor for a research-based master's. Starting with Nova Scotia's DLI-listed universities.">
+<link rel="canonical" href="https://www.meskhathossain.com/find-my-professor.html">
+<meta property="og:title" content="Find My Professor: Find a Supervisor for a Research Master's in Canada">
+<meta property="og:description" content="Search professors by field and research topic, see their recent papers, and reach them through official university pages.">
+<meta property="og:url" content="https://www.meskhathossain.com/find-my-professor.html">
+<meta property="og:image" content="https://www.meskhathossain.com/meskhat-profile.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Fraunces:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Hind+Siliguri:wght@400;600&amp;display=swap">
+<link rel="stylesheet" href="styles.css?v=20261112e">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+ {"@type":"WebPage","name":"Find My Professor: Supervisors for Research Master's in Canada","url":"https://www.meskhathossain.com/find-my-professor.html","isPartOf":{"@id":"https://www.meskhathossain.com/#website"}},
+ {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.meskhathossain.com/"},{"@type":"ListItem","position":2,"name":"Student tools","item":"https://www.meskhathossain.com/tools.html"},{"@type":"ListItem","position":3,"name":"Find My Professor","item":"https://www.meskhathossain.com/find-my-professor.html"}]},
+ {"@type":"FAQPage","mainEntity":[
+  {"@type":"Question","name":"How do I find a supervisor for a research master's in Canada?","acceptedAnswer":{"@type":"Answer","text":"Search for professors whose current research matches your interests, read two or three of their recent papers, check the program's admission requirements on the university website, then email the professor a short, specific message with your CV and transcript."}},
+  {"@type":"Question","name":"Does this list show which professors have funding?","acceptedAnswer":{"@type":"Answer","text":"No. Funding changes every year and isn't published centrally. Use this list to find professors whose research matches yours, then check their official profile or lab page and ask them directly."}}
+ ]}
+]}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site">
+  <div class="wrap nav">
+    <a href="/" class="logo"><img src="meskhat-profile-640.webp" alt="" width="38" height="38">Meskhat Hossain</a>
+    <nav class="nav-links" id="navLinks"><a href="/">Home</a><a href="/blog.html">Blog</a><a href="/tools.html" class="active">Tools</a><a href="/videos.html">Videos</a><a href="/resources.html">Resources</a><a href="/about.html">About</a><a href="/contact.html">Contact</a></nav>
+    <a class="btn btn-red" href="https://www.youtube.com/@TheHumanChanger?sub_confirmation=1" target="_blank" rel="noopener">Subscribe <span class="arrow">→</span></a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="main">
+  <section class="page-hero" style="padding-bottom:36px">
+    <div class="wrap">
+      <nav class="crumbs-bar" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/tools.html">Student tools</a> / <span>Find My Professor</span></nav>
+      <span class="eyebrow">New · Pilot: Nova Scotia</span>
+      <h1 class="display">Find my <span class="fade">professor.</span></h1>
+      <p class="lead">Search active researchers at Canadian universities by field and topic, see what they're working on now, and reach them through their official university pages. Built to help you find a professor for a research-based master's.</p>
+      <div class="dir-meta"><span><b id="mPeople">…</b>active researchers</span><span><b id="mUnis">6</b>DLI-listed universities</span><span><b id="mDate">…</b>data updated</span></div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="sv-filters">
+        <label class="sv-f"><span>Province</span><select id="fProv"><option value="ns">Nova Scotia</option><option disabled>More provinces coming soon</option></select></label>
+        <label class="sv-f"><span>University</span><select id="fUni"><option value="">All universities</option></select></label>
+        <label class="sv-f"><span>Field</span><select id="fField"><option value="">All fields</option></select></label>
+        <label class="sv-f sv-q"><span>Research topic or name</span><input id="fQ" type="search" placeholder="e.g. machine learning, ocean, nursing, climate"></label>
+      </div>
+      <div class="sv-bar"><p id="svCount" aria-live="polite">Loading researchers…</p>
+        <label class="sv-sort">Sort by <select id="fSort"><option value="recent">Most active recently</option><option value="cites">Most cited</option><option value="name">Name (A–Z)</option></select></label>
+      </div>
+      <div id="svList" class="sv-list"></div>
+      <div class="center-cta"><button type="button" class="btn btn-outline" id="svMore" hidden>Show more researchers</button></div>
+      <p class="dir-empty" id="svEmpty" hidden>No researchers match. Try a broader topic (e.g. "health" instead of a specific disease) or another university.</p>
+
+      <div class="sv-note">
+        <b>How this list is made:</b> researchers with at least 3 papers at the university in the last 3 years, from <a href="https://openalex.org" target="_blank" rel="noopener">OpenAlex</a>, a free, open database of research. It can include adjunct or affiliated researchers and miss people who publish less. It does <b>not</b> show who has funding or open positions: always confirm on the professor's official page and the program's admission page. No emails are stored here; use the official university links to contact professors.
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW TO EMAIL -->
+  <section class="sec-soft" id="how">
+    <div class="wrap">
+      <div class="sec-head center"><span class="label">Step by step</span><h2 class="display">How to email a professor for a funded master's</h2><p class="lead">Professors get many emails. A short, specific one gets read.</p></div>
+      <div class="how-grid">
+        <div class="how"><span class="tool-n">01</span><h3>Shortlist 8–15 professors</h3><p>Use the filters above. Pick people whose <em>recent</em> topics match what you want to research, not just your degree title.</p></div>
+        <div class="how"><span class="tool-n">02</span><h3>Read their recent work</h3><p>Open 2–3 of their recent papers. Note one specific idea you found interesting and how your skills could help.</p></div>
+        <div class="how"><span class="tool-n">03</span><h3>Check the program first</h3><p>Look at the department's master's admission page: deadlines, minimum grades, English test scores, and whether you apply first or contact a supervisor first.</p></div>
+        <div class="how"><span class="tool-n">04</span><h3>Write 150–200 words</h3><p>Subject: "Prospective MSc student – [topic]". Say who you are, which of their papers interested you and why, your relevant skills, and ask if they're taking students for [term]. Attach your CV and transcript.</p></div>
+        <div class="how"><span class="tool-n">05</span><h3>Use their official email</h3><p>Click "Official profile" on the card to find their current email on the university website. Send one personal email per professor, not a mass email.</p></div>
+        <div class="how"><span class="tool-n">06</span><h3>Follow up once</h3><p>No reply after 10–14 days? One polite follow-up is fine. Then move on; many professors simply don't have space that year.</p></div>
+      </div>
+      <p class="fine center" style="margin-top:28px">Funding for research master's in Canada usually comes from the supervisor's grants, university scholarships, or teaching/research assistantships. Ask the professor and the department what's available.</p>
+    </div>
+  </section>
+
+  <section class="cta-pro" style="padding-top:90px">
+    <div class="wrap">
+      <div class="cta-pro-box">
+        <div><span class="label" style="color:#ff8a7e">More tools</span><h2 class="display">Plan your budget and timeline</h2><p>Free calculators and checklists for your move to Canada.</p></div>
+        <div class="cta-pro-btns"><a class="btn btn-red" href="/tools.html">Student tools <span class="arrow">→</span></a><a class="btn btn-ghost-light" href="/free-checklist.html">Free checklist <span class="arrow">→</span></a></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand"><a href="/" class="logo" style="color:#fff"><img src="meskhat-profile-640.webp" alt="" width="38" height="38">Meskhat Hossain</a><p>Creator of The Human Changer. Honest guidance for Bangladeshi students building a life in Canada, since 2021.</p></div>
+      <div><h2 class="foot-h">Pages</h2><a href="/">Home</a><a href="/blog.html">Blog</a><a href="/tools.html">Student tools</a><a href="/videos.html">Videos</a><a href="/resources.html">Resources</a><a href="/about.html">About</a><a href="/contact.html">Contact</a></div>
+      <div><h2 class="foot-h">Free &amp; guides</h2><a href="/find-my-professor.html">Find My Professor</a><a href="/free-checklist.html">Free checklist</a><a href="/guide.html">First 90 Days guide</a><a href="/media-kit.html">Media kit</a><a href="/privacy.html">Privacy</a></div>
+      <div><h2 class="foot-h">Follow</h2><a href="https://www.youtube.com/@TheHumanChanger" target="_blank" rel="noopener">YouTube</a><a href="https://www.facebook.com/meskhat.hossain" target="_blank" rel="noopener">Facebook</a><a href="https://www.facebook.com/Thehumanchanger" target="_blank" rel="noopener">Facebook Page</a><a href="https://www.instagram.com/meskhat_hossain" target="_blank" rel="noopener">Instagram</a></div>
+    </div>
+    <div class="foot-bottom"><span>© <span data-year>2026</span> Meskhat Hossain · The Human Changer</span><span>Not affiliated with IRCC or any university. Research data: OpenAlex (CC0).</span></div>
+  </div>
+</footer>
+<script src="main.js?v=20261112e"></script>
+<script src="supervisors.js?v=20261112e"></script>
+</body>
+</html>
