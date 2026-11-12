@@ -251,13 +251,97 @@ form.contact-form{background:#fff;border:1px solid var(--line);border-radius:24p
 
 /* footer */
 footer.site{background:var(--ink);color:#c9c9d2;padding:70px 0 34px;margin-top:0}
-.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px}
 .foot-grid h4{font-family:var(--display);font-weight:400;text-transform:uppercase;color:#fff;font-size:18px;margin-bottom:14px;letter-spacing:.03em}
 .foot-grid a{display:block;padding:4px 0;color:#c9c9d2}
 .foot-grid a:hover{color:#fff}
 .foot-brand p{max-width:340px;font-size:15px;margin-top:14px}
 .foot-bottom{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.12);margin-top:50px;padding-top:24px;font-size:14px;color:#8d8d99}
 .foot-bottom a{text-decoration:underline;text-underline-offset:3px}
+
+/* signup */
+[hidden]{display:none !important}
+.signup-box{background:var(--ink);color:#fff;border-radius:32px;padding:56px;display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:center;position:relative;overflow:hidden;overflow:clip}
+.signup-box>*:not(.blob){min-width:0;position:relative;z-index:1}
+.signup-box .label{color:#ff8a7e}
+.signup-box h2{color:#fff}
+.signup-box .lead{color:#c9c9d2}
+.signup-box .ticks{list-style:none;margin-top:20px;display:grid;gap:8px;color:#dcdce3;font-size:16px}
+.signup-box .ticks li:before{content:"✓";color:#ff8a7e;margin-right:10px;font-weight:700}
+form.signup-form{background:#fff;color:var(--ink);border-radius:22px;padding:28px;display:grid;gap:14px}
+form.signup-form h3{font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:24px}
+form.signup-form input{font:16px var(--serif);padding:14px 16px;border-radius:14px;border:1.5px solid var(--line);width:100%;min-width:0}
+form.signup-form input:focus{outline:none;border-color:var(--ink)}
+form.signup-form button{justify-content:center}
+.signup-ok{background:#fff;color:var(--ink);border-radius:22px;padding:28px;text-align:center}
+.signup-ok h3{font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:26px;margin-bottom:8px}
+.fine{font-size:13px;color:var(--muted);font-style:italic}
+.pdf-mock{aspect-ratio:3/4;max-width:300px;margin:0 auto;border-radius:12px;background:#fff;box-shadow:0 30px 60px rgba(0,0,0,.35);padding:26px;display:flex;flex-direction:column;justify-content:space-between;transform:rotate(-3deg);color:var(--ink)}
+.pdf-mock .t{font-family:var(--display);text-transform:uppercase;font-size:34px;line-height:.95}
+.pdf-mock .t span{color:var(--red-soft)}
+.pdf-mock.dark{background:var(--ink);color:#fff;border:1px solid rgba(255,255,255,.15)}
+.pdf-mock.dark .t span{color:#ff8a7e}
+.pdf-mock small{font-size:12px;color:var(--muted)}
+
+/* product */
+.product{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:center}
+.product>*{min-width:0}
+.price{display:flex;align-items:baseline;gap:12px;margin:24px 0 8px}
+.price b{font-family:var(--display);font-weight:400;font-size:64px;line-height:1}
+.price s{color:var(--muted);font-size:20px}
+.chapters{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:40px}
+.chapters div{background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px}
+.chapters b{font-family:var(--display);font-weight:400;color:var(--red-soft);font-size:28px;display:block;line-height:1}
+.chapters span{font-weight:600;display:block;margin-top:8px}
+.chapters p{font-size:14.5px;color:var(--ink-2);margin-top:4px}
+
+/* resources */
+.res-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:30px}
+.res-grid>*{min-width:0}
+.res{background:#fff;border:1px solid var(--line);border-radius:20px;padding:26px;display:flex;flex-direction:column;gap:10px;transition:transform .25s,box-shadow .25s}
+.res:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(22,22,27,.08)}
+.res .cat{font-family:var(--display);text-transform:uppercase;letter-spacing:.05em;font-size:13px;color:var(--red)}
+.res h3{font-weight:600;font-size:19px}
+.res p{color:var(--ink-2);font-size:15px}
+.res .go{margin-top:auto;padding-top:8px;color:var(--red);font-weight:500}
+.res-section{margin-top:64px}
+.res-section:first-of-type{margin-top:20px}
+.disclosure{background:var(--soft);border-radius:18px;padding:20px 24px;font-size:15px;color:var(--ink-2);margin-top:10px}
+
+/* media kit */
+.kit-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:44px}
+.kit-stats div{background:#fff;border:1px solid var(--line);border-radius:20px;padding:26px}
+.kit-stats b{font-family:var(--display);font-weight:400;font-size:clamp(40px,4.5vw,58px);display:block;line-height:1}
+.kit-stats span{color:var(--muted);font-style:italic;font-size:15px}
+.offer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:44px}
+.offer-grid>*{min-width:0}
+.offer{background:#fff;border:1px solid var(--line);border-radius:22px;padding:30px}
+.offer .ic{width:50px;height:50px;border-radius:50%;background:var(--blush);color:var(--red);display:grid;place-items:center;margin-bottom:18px}
+.offer .ic svg{width:22px;height:22px}
+.offer h3{font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:22px;margin-bottom:8px}
+.offer p{color:var(--ink-2);font-size:15.5px}
+.aud{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:36px}
+.aud div{border-left:3px solid var(--red);padding:4px 0 4px 18px}
+.aud b{display:block;font-weight:600;margin-bottom:4px}
+.aud span{color:var(--ink-2);font-size:15.5px}
+
+@media (max-width:1024px){
+  .res-grid,.offer-grid{grid-template-columns:repeat(2,1fr)}
+  .kit-stats{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:860px){
+  .signup-box,.product{grid-template-columns:minmax(0,1fr);gap:36px}
+  .signup-box{padding:40px 24px;border-radius:26px}
+  .aud{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:600px){
+  .res-grid,.offer-grid,.chapters{grid-template-columns:minmax(0,1fr)}
+  .kit-stats{grid-template-columns:1fr 1fr;gap:12px}
+  .kit-stats div{padding:18px}
+  .signup-box{padding:32px 18px}
+  form.signup-form{padding:20px}
+  .price b{font-size:52px}
+}
 
 /* reveal */
 .reveal{opacity:0;transform:translateY(26px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}

@@ -10,6 +10,15 @@ const SOCIAL = {
 };
 /* Lifetime video views (YouTube channel total from the channel's About panel) */
 const VIEWS = { youtube: 1630314 };
+/* Email signups go to a Google Form owned by Meskhat (responses tab in Google Forms) */
+const SIGNUP = {
+  action: "https://docs.google.com/forms/d/e/1FAIpQLSdC6CJ3BdZR1Lgg-RRCWydsUkFGwePIz0-CtBipruFhTls6MA/formResponse",
+  email: "entry.352128405",
+  name: "entry.470374742",
+  download: "/canada-student-checklist.pdf"
+};
+/* Paste your Gumroad / Lemon Squeezy product link here when the store is ready */
+const GUIDE_URL = "";
 /* Facebook views, last 90 days (Creator Dashboard: profile 5,207 + Human Changer page 96) */
 const FB90 = { views: 5303, period: "Aug 14 – Nov 11, 2026" };
 
@@ -91,6 +100,29 @@ document.addEventListener('DOMContentLoaded', () => {
     const f = c.dataset.f;
     document.querySelectorAll('.vcard[data-f]').forEach(v => v.classList.toggle('hide', !(f === 'all' || v.dataset.f.split(' ').includes(f))));
   }));
+
+  /* email signup → Google Form, then reveal the download */
+  document.querySelectorAll('form.signup-form').forEach(f => {
+    f.addEventListener('submit', e => {
+      e.preventDefault();
+      const email = f.querySelector('input[type=email]').value.trim();
+      const name = (f.querySelector('input[name=name]') || {}).value || '';
+      if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) return;
+      const body = new URLSearchParams(); body.append(SIGNUP.email, email); body.append(SIGNUP.name, name);
+      const btn = f.querySelector('button'); if (btn) { btn.disabled = true; btn.textContent = 'Sending…'; }
+      fetch(SIGNUP.action, {method:'POST', mode:'no-cors', body}).catch(() => {}).finally(() => {
+        f.hidden = true;
+        const ok = f.parentElement.querySelector('.signup-ok'); if (ok) ok.hidden = false;
+      });
+    });
+  });
+
+  /* guide buy buttons */
+  document.querySelectorAll('[data-buy]').forEach(a => {
+    if (GUIDE_URL) { a.href = GUIDE_URL; a.target = '_blank'; a.rel = 'noopener'; }
+    else { a.href = '/free-checklist.html#signup'; a.querySelector('.buy-label') && (a.querySelector('.buy-label').textContent = 'Join the launch list'); }
+  });
+  document.querySelectorAll('[data-guide-status]').forEach(el => el.textContent = GUIDE_URL ? 'Available now · instant PDF download' : 'Launching soon · join the list for the launch price');
 
   /* contact form → opens the visitor's email app */
   const form = document.getElementById('contactForm');
