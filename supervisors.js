@@ -1,7 +1,7 @@
 /* Find My Professor — loads supervisors-index.json, then per-university files (sv-*.json) for the chosen province.
    Data: OpenAlex (CC0). Recent papers load live from OpenAlex when a card is opened. No emails are stored. */
 (function(){
-  const PAGE = 24, V = '20261112g';
+  const PAGE = 24, V = '20261112j';
   const $ = id => document.getElementById(id);
   const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const safeUrl = u => {
@@ -34,7 +34,7 @@
   let curProv = null;
   function fetchUni(u){
     if (cache[u.file]) return Promise.resolve(cache[u.file]);
-    return fetch(u.file + '?v=' + V).then(r => r.json()).then(j => (cache[u.file] = j.people.map(p => (p.uni = u.short, p.topics = p.topics || [], p)))).catch(() => []);
+    return fetch(u.file + '?v=' + V).then(r => r.json()).then(j => (cache[u.file] = j.people.filter(p => p.rc <= 1000).map(p => (p.uni = u.short, p.topics = p.topics || [], p)))).catch(() => []);
   }
   function loadProvince(name, wantUni, wantField){
     const prov = index.provinces.find(p => p.name === name);
@@ -77,7 +77,7 @@
       return words.every(w => hay.includes(w));
     });
     const s = $('fSort').value;
-    list.sort(s === 'cites' ? (a,b) => b.cites - a.cites : s === 'name' ? (a,b) => a.name.localeCompare(b.name) : (a,b) => b.rc - a.rc || b.cites - a.cites);
+    list.sort(s === 'cites' ? (a,b) => b.cites - a.cites : s === 'name' ? (a,b) => a.name.localeCompare(b.name) : (a,b) => Math.min(b.rc, 30) - Math.min(a.rc, 30) || b.cites - a.cites);
     return list;
   }
 
@@ -93,7 +93,7 @@
     return `<article class="sv-card">
       <div class="sv-top">
         <div><h3>${esc(p.name)}</h3><p class="sv-uni">${esc(u.name || p.uni)} · <span>${esc(p.field)}</span></p></div>
-        <span class="sv-active" title="Publications in the last 3 years">${p.rc} recent papers</span>
+        <span class="sv-active" title="Publications in the last 3 years">${p.rc > 100 ? '100+' : p.rc} recent papers</span>
       </div>
       <div class="sv-topics">${p.topics.slice(0,4).map(t => `<span>${esc(t)}</span>`).join('')}</div>
       <details class="sv-recent" data-id="${esc(p.id)}"${p.recent && p.recent.length ? ' data-loaded="1"' : ''}><summary>Recent research</summary>${pre}</details>
