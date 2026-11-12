@@ -496,7 +496,6 @@ form.kit-form{background:transparent;padding:0;border-radius:0;gap:12px;margin-t
 .tool-tile .more{margin-top:auto;color:var(--red);font-weight:500}
 
 /* ===== Find My Professor ===== */
-.nav-links a.nav-key::before{content:"New";font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:10px;letter-spacing:.06em;background:var(--red);color:#fff;border-radius:999px;padding:2px 7px;margin-right:6px;vertical-align:2px}
 .fmp-feature{display:flex;justify-content:space-between;align-items:center;gap:28px;flex-wrap:wrap;background:var(--ink);color:#fff;border-radius:24px;padding:30px 34px;margin-top:34px}
 .fmp-feature h3{font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:clamp(26px,3vw,36px);margin:10px 0 6px;line-height:1.05}
 .fmp-feature p{color:#c9c9d2;max-width:640px;font-size:15.5px}
@@ -765,15 +764,6 @@ a.pl:hover{opacity:.7}
 @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.blob,.live i{animation:none}html{scroll-behavior:auto}}
 
 /* responsive */
-@media (max-width:1280px){
-  .nav-links{gap:20px;font-size:15px}
-  .nav .btn{padding:10px 16px}
-}
-@media (max-width:1120px){
-  .nav-links,.nav .btn{display:none}
-  .menu-btn{display:block}
-  .nav-links.open{display:flex;flex-direction:column;position:absolute;top:78px;left:0;right:0;background:#fff;padding:22px 28px;gap:20px;border-bottom:1px solid var(--line);font-size:18px}
-}
 @media (max-width:1024px){
   .social-grid{grid-template-columns:repeat(2,1fr)}
   .ircc-grid{grid-template-columns:minmax(0,1fr)}
