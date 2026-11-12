@@ -14,27 +14,22 @@
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Hind+Siliguri:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Fraunces:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Hind+Siliguri:wght@400;600&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Fraunces:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Hind+Siliguri:wght@400;600&amp;display=swap"></noscript>
+<link rel="stylesheet" href="styles.css?v=20261112">
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 
 <header class="site">
   <div class="wrap nav">
-    <a href="/" class="logo"><img src="meskhat-profile.jpg" alt="" width="38" height="38">Meskhat Hossain</a>
-    <nav class="nav-links" id="navLinks">
-      <a href="/">Home</a>
-      <a href="/videos.html">Videos</a>
-      <a href="/blog.html" class="active">Blog</a>
-      <a href="/resources.html">Resources</a>
-      <a href="/contact.html">Contact</a>
-    </nav>
+    <a href="/" class="logo"><img src="meskhat-profile-640.webp" alt="" width="38" height="38">Meskhat Hossain</a>
+    <nav class="nav-links" id="navLinks"><a href="/">Home</a><a href="/blog.html" class="active">Blog</a><a href="/tools.html">Tools</a><a href="/videos.html">Videos</a><a href="/resources.html">Resources</a><a href="/about.html">About</a><a href="/contact.html">Contact</a></nav>
     <a class="btn btn-red" href="https://www.youtube.com/@TheHumanChanger?sub_confirmation=1" target="_blank" rel="noopener">Subscribe <span class="arrow">→</span></a>
     <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
 </header>
 
-<main>
+<main id="main">
   <section class="page-hero">
     <span class="blob" style="width:220px;height:220px;background:var(--green-soft);left:6%;top:30px"></span>
     <span class="blob" style="width:110px;height:110px;background:var(--gold);right:8%;bottom:20px;animation-delay:-5s"></span>
@@ -47,11 +42,16 @@
 
   <section style="padding-top:10px">
     <div class="wrap">
-      <div class="grid-3" style="margin-top:0">
-        <a class="pcard reveal" href="/canada-student-proof-of-funds-2026.html"><div class="post-cover c1"><span>How much money<br>do you need?</span></div><div class="meta"><span class="tag">Money · Nov 12, 2026</span><h3>Proof of funds for a Canadian study permit in 2026–27</h3><p class="ex">The new IRCC living-cost amounts, what they cover, and how to plan your budget from Bangladesh.</p><span class="more">Read article →</span></div></a>
-        <a class="pcard reveal" href="/canada-student-work-hours.html"><div class="post-cover c2"><span>The 24-hour<br>work rule</span></div><div class="meta"><span class="tag">Work · Nov 12, 2026</span><h3>How many hours can international students work in Canada?</h3><p class="ex">Off-campus work limits during classes and breaks, and how to stay within your permit conditions.</p><span class="more">Read article →</span></div></a>
-        <a class="pcard reveal" href="/canada-immigration-levels-plan-2027-2029.html"><div class="post-cover c3"><span>Levels plan<br>2027–2029</span></div><div class="meta"><span class="tag">IRCC news · Nov 12, 2026</span><h3>What Canada's new immigration plan means for students</h3><p class="ex">Up to 150,000 new students a year, 380,000 new PRs, and the November 2026 Express Entry change.</p><span class="more">Read article →</span></div></a>
+      <div class="blog-tools">
+        <label class="dir-search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="blogSearch" type="search" placeholder="Search guides: funds, work hours, immigration plan…" aria-label="Search articles"></label>
+        <div class="filters" id="blogFilters" aria-label="Filter by category"></div>
       </div>
+      <div class="grid-3" id="blogGrid" style="margin-top:0">
+        <a class="pcard" data-cat="IRCC news" href="/canada-immigration-levels-plan-2027-2029.html"><div class="post-cover c3"><span>Levels plan<br>2027–2029</span></div><div class="meta"><span class="tag">IRCC news · 6 min read</span><h3>What Canada's new immigration plan means for students</h3><p class="ex">Up to 150,000 new students a year, 380,000 new PRs, and the November 2026 Express Entry change.</p><span class="post-dates">Published Nov 12, 2026</span><span class="more">Read article →</span></div></a>
+        <a class="pcard" data-cat="Work" href="/canada-student-work-hours.html"><div class="post-cover c2"><span>The 24-hour<br>work rule</span></div><div class="meta"><span class="tag">Work · 5 min read</span><h3>How many hours can international students work in Canada?</h3><p class="ex">Off-campus work limits during classes and breaks, and how to stay within your permit conditions.</p><span class="post-dates">Published Nov 12, 2026</span><span class="more">Read article →</span></div></a>
+        <a class="pcard" data-cat="Money" href="/canada-student-proof-of-funds-2026.html"><div class="post-cover c1"><span>How much money<br>do you need?</span></div><div class="meta"><span class="tag">Money · 6 min read</span><h3>Proof of funds for a Canadian study permit in 2026–27</h3><p class="ex">The new IRCC living-cost amounts, what they cover, and how to plan your budget from Bangladesh.</p><span class="post-dates">Published Nov 12, 2026</span><span class="more">Read article →</span></div></a>
+      </div>
+      <p class="dir-empty" id="blogEmpty" hidden>No articles match. Try another word, or <a class="link-arrow" href="/contact.html">suggest a topic <span class="arrow">→</span></a></p>
       <div class="callout green reveal" style="margin-top:50px;text-align:center">More guides are on the way. Want one on a specific topic? <a class="link-arrow" href="/contact.html">Suggest a topic <span class="arrow">→</span></a></div>
     </div>
   </section>
@@ -60,14 +60,14 @@
 <footer class="site">
   <div class="wrap">
     <div class="foot-grid">
-      <div class="foot-brand"><a href="/" class="logo" style="color:#fff"><img src="meskhat-profile.jpg" alt="" width="38" height="38">Meskhat Hossain</a><p>Creator of The Human Changer. Honest guidance for Bangladeshi students building a life in Canada, since 2021.</p></div>
-      <div><h4>Pages</h4><a href="/">Home</a><a href="/videos.html">Videos</a><a href="/blog.html">Blog</a><a href="/resources.html">Resources</a><a href="/contact.html">Contact</a></div>
-      <div><h4>Free &amp; guides</h4><a href="/free-checklist.html">Free checklist</a><a href="/guide.html">First 90 Days guide</a><a href="/media-kit.html">Media kit</a></div>
-      <div><h4>Follow</h4><a href="https://www.youtube.com/@TheHumanChanger" target="_blank" rel="noopener">YouTube</a><a href="https://www.facebook.com/meskhat.hossain" target="_blank" rel="noopener">Facebook</a><a href="https://www.facebook.com/Thehumanchanger" target="_blank" rel="noopener">Facebook Page</a><a href="https://www.instagram.com/meskhat_hossain" target="_blank" rel="noopener">Instagram</a></div>
+      <div class="foot-brand"><a href="/" class="logo" style="color:#fff"><img src="meskhat-profile-640.webp" alt="" width="38" height="38">Meskhat Hossain</a><p>Creator of The Human Changer. Honest guidance for Bangladeshi students building a life in Canada, since 2021.</p></div>
+      <div><h2 class="foot-h">Pages</h2><a href="/">Home</a><a href="/blog.html">Blog</a><a href="/tools.html">Student tools</a><a href="/videos.html">Videos</a><a href="/resources.html">Resources</a><a href="/about.html">About</a><a href="/contact.html">Contact</a></div>
+      <div><h2 class="foot-h">Free &amp; guides</h2><a href="/free-checklist.html">Free checklist</a><a href="/guide.html">First 90 Days guide</a><a href="/media-kit.html">Media kit</a></div>
+      <div><h2 class="foot-h">Follow</h2><a href="https://www.youtube.com/@TheHumanChanger" target="_blank" rel="noopener">YouTube</a><a href="https://www.facebook.com/meskhat.hossain" target="_blank" rel="noopener">Facebook</a><a href="https://www.facebook.com/Thehumanchanger" target="_blank" rel="noopener">Facebook Page</a><a href="https://www.instagram.com/meskhat_hossain" target="_blank" rel="noopener">Instagram</a></div>
     </div>
     <div class="foot-bottom"><span>© <span data-year>2026</span> Meskhat Hossain · The Human Changer</span><span>Not affiliated with IRCC. Always confirm rules on <a href="https://www.canada.ca/en/immigration-refugees-citizenship.html" target="_blank" rel="noopener">Canada.ca</a>.</span></div>
   </div>
 </footer>
-<script src="main.js"></script>
+<script src="main.js?v=20261112"></script>
 </body>
 </html>

@@ -22,6 +22,13 @@ const GUIDE_URL = "";
 /* Facebook views, last 90 days (Creator Dashboard: profile 5,207 + Human Changer page 96) */
 const FB90 = { views: 5303, period: "Aug 14 – Nov 11, 2026" };
 
+/* ===== Blog articles: add new posts here (newest first) ===== */
+const POSTS = [
+  {slug:"canada-immigration-levels-plan-2027-2029.html", title:"What Canada's new immigration plan means for students", cat:"IRCC news", date:"2026-11-12", updated:"2026-11-12", mins:6, cover:"c3", coverText:"Levels plan<br>2027–2029", excerpt:"Up to 150,000 new students a year, 380,000 new PRs, and the November 2026 Express Entry change."},
+  {slug:"canada-student-work-hours.html", title:"How many hours can international students work in Canada?", cat:"Work", date:"2026-11-12", updated:"2026-11-12", mins:5, cover:"c2", coverText:"The 24-hour<br>work rule", excerpt:"Off-campus work limits during classes and breaks, and how to stay within your permit conditions."},
+  {slug:"canada-student-proof-of-funds-2026.html", title:"Proof of funds for a Canadian study permit in 2026–27", cat:"Money", date:"2026-11-12", updated:"2026-11-12", mins:6, cover:"c1", coverText:"How much money<br>do you need?", excerpt:"The new IRCC living-cost amounts, what they cover, and how to plan your budget from Bangladesh."}
+];
+
 function fmt(n){
   if (n >= 1e6) return (n/1e6).toFixed(n % 1e6 === 0 ? 0 : 1).replace(/\.0$/,'') + 'M';
   if (n >= 1e3) return (n/1e3).toFixed(n >= 1e4 ? 0 : 1).replace(/\.0$/,'') + 'K';
@@ -91,6 +98,70 @@ document.addEventListener('DOMContentLoaded', () => {
     }).catch(() => {
       box.innerHTML = '<p class="muted" style="padding:16px 0">Live news couldn\'t load right now. <a class="link-arrow" href="https://www.canada.ca/en/immigration-refugees-citizenship/news.html" target="_blank" rel="noopener">Read the latest on Canada.ca <span class="arrow">→</span></a></p>';
     });
+  }
+
+  /* ===== Blog index: search + category filter ===== */
+  const blogGrid = document.getElementById('blogGrid');
+  if (blogGrid){
+    const dfmt = d => new Date(d + 'T00:00:00').toLocaleDateString('en-CA', {year:'numeric', month:'short', day:'numeric'});
+    if (!blogGrid.querySelector('.pcard')) blogGrid.innerHTML = POSTS.map(p => `
+      <a class="pcard" data-cat="${p.cat}" href="/${p.slug}">
+        <div class="post-cover ${p.cover}"><span>${p.coverText}</span></div>
+        <div class="meta"><span class="tag">${p.cat} · ${p.mins} min read</span><h3>${p.title}</h3><p class="ex">${p.excerpt}</p>
+        <span class="post-dates">Published ${dfmt(p.date)}${p.updated !== p.date ? ' · Updated ' + dfmt(p.updated) : ''}</span><span class="more">Read article →</span></div>
+      </a>`).join('');
+    const cats = ['All', ...new Set(POSTS.map(p => p.cat))];
+    const fbar = document.getElementById('blogFilters');
+    fbar.innerHTML = cats.map((c,i) => `<button class="chip${i ? '' : ' active'}" data-bcat="${c}">${c}</button>`).join('');
+    const q = document.getElementById('blogSearch'); let cat = 'All';
+    const apply = () => {
+      const words = q.value.trim().toLowerCase().split(/\s+/).filter(Boolean); let n = 0;
+      blogGrid.querySelectorAll('.pcard').forEach(card => {
+        const t = card.textContent.toLowerCase();
+        const ok = (cat === 'All' || card.dataset.cat === cat) && words.every(w => t.includes(w));
+        card.style.display = ok ? '' : 'none'; if (ok) n++;
+      });
+      document.getElementById('blogEmpty').hidden = n > 0;
+    };
+    q.addEventListener('input', apply);
+    fbar.addEventListener('click', e => { const b = e.target.closest('[data-bcat]'); if (!b) return; cat = b.dataset.bcat; fbar.querySelectorAll('.chip').forEach(x => x.classList.toggle('active', x === b)); apply(); });
+  }
+
+  /* ===== Article enhancements: progress, TOC, dates, share, related ===== */
+  const art = document.querySelector('article.article');
+  if (art){
+    const slug = location.pathname.split('/').pop();
+    const post = POSTS.find(p => p.slug === slug);
+    // reading progress
+    const bar = document.createElement('div'); bar.className = 'read-progress'; bar.setAttribute('aria-hidden','true'); document.body.appendChild(bar);
+    const upd = () => { const r = art.getBoundingClientRect(); const total = r.height - innerHeight; bar.style.transform = 'scaleX(' + Math.min(1, Math.max(0, total > 0 ? -r.top / total : 1)) + ')'; };
+    addEventListener('scroll', upd, {passive:true}); upd();
+    // table of contents from h2s
+    const hs = [...art.querySelectorAll('h2')];
+    const byline = art.querySelector('.byline');
+    if (hs.length >= 3 && byline){
+      hs.forEach((h,i) => { if (!h.id) h.id = 's' + (i+1) + '-' + h.textContent.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'').slice(0,40); });
+      const toc = document.createElement('nav'); toc.className = 'toc'; toc.setAttribute('aria-label','On this page');
+      toc.innerHTML = '<b>On this page</b><ol>' + hs.map(h => `<li><a href="#${h.id}">${h.textContent}</a></li>`).join('') + '</ol>';
+      byline.after(toc);
+    }
+    // last checked line
+    if (post && byline){
+      const v = document.createElement('p'); v.className = 'verified-line';
+      v.innerHTML = '✓ Official rules in this article were last checked against Canada.ca on <time datetime="' + post.updated + '">' + new Date(post.updated + 'T00:00:00').toLocaleDateString('en-CA',{year:'numeric',month:'long',day:'numeric'}) + '</time>.';
+      byline.after(v);
+    }
+    // share + related at the end
+    const end = art.querySelector('p:last-of-type');
+    const url = encodeURIComponent(location.href.split('#')[0]), title = encodeURIComponent(document.title);
+    const share = document.createElement('div'); share.className = 'share';
+    share.innerHTML = '<b>Share this guide</b><a href="https://www.facebook.com/sharer/sharer.php?u=' + url + '" target="_blank" rel="noopener">Facebook</a><a href="https://wa.me/?text=' + title + '%20' + url + '" target="_blank" rel="noopener">WhatsApp</a><button type="button" class="copy-link">Copy link</button>';
+    share.querySelector('.copy-link').addEventListener('click', e => { navigator.clipboard && navigator.clipboard.writeText(location.href.split('#')[0]).then(() => { e.target.textContent = 'Link copied ✓'; setTimeout(() => e.target.textContent = 'Copy link', 2000); }); });
+    const related = POSTS.filter(p => p.slug !== slug).slice(0, 2);
+    const rel = document.createElement('section'); rel.className = 'related';
+    rel.innerHTML = '<h2>Keep reading</h2><div class="related-grid">' + related.map(p => `<a class="pcard" href="/${p.slug}"><div class="post-cover ${p.cover}"><span>${p.coverText}</span></div><div class="meta"><span class="tag">${p.cat} · ${p.mins} min read</span><h3>${p.title}</h3></div></a>`).join('') +
+      '<a class="related-tool" href="/tools.html"><span class="tag">Free tool</span><h3>Plan your budget, documents and timeline</h3><span class="more">Open student tools →</span></a></div>';
+    if (end){ end.before(share); end.before(rel); } else { art.append(share, rel); }
   }
 
   /* video filters */
