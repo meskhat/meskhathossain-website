@@ -476,7 +476,8 @@ h2.display{font-size:clamp(32px,4.2vw,54px);line-height:1.02}
 .proof b{display:block;font-family:var(--display);font-weight:400;font-size:clamp(28px,3vw,38px);line-height:1}
 .proof span{font-size:14px;color:var(--muted);font-style:italic}
 .hero-pro .portrait{max-width:440px}
-.hero-pro .chip-2{right:-18px;bottom:10%}
+.hero-pro .chip-1{left:-34px;top:18%}
+.hero-pro .chip-2{right:-18px;bottom:12%}
 
 /* platform strip */
 .platforms{padding:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#fff}
