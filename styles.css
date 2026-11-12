@@ -606,6 +606,9 @@ form.kit-form{background:transparent;padding:0;border-radius:0;gap:12px;margin-t
   .tool-card{border:0;padding:0}
 }
 
+/* Above-the-fold content shows instantly (faster Largest Contentful Paint) */
+.hero .reveal,.page-hero .reveal{opacity:1;transform:none;transition:none}
+
 /* ===== Accessibility & contrast ===== */
 :root{--accent-text:#c95a4e}
 .fade{color:var(--accent-text)}
