@@ -294,8 +294,9 @@ footer.site{background:var(--ink);color:#c9c9d2;padding:70px 0 34px;margin-top:0
   .social-grid{grid-template-columns:1fr 1fr;gap:12px}
   .social-card{padding:16px}
   .social-band{padding:44px 18px}
-  .totals{display:grid;grid-template-columns:1fr 1fr;gap:0;width:100%}
+  .totals{display:grid;grid-template-columns:1fr 1fr;gap:22px 0;width:100%}
   .totals .total+.total{padding-left:18px}
+  .totals .total:nth-child(3){padding-left:0;border-left:0;grid-column:1/-1}
   .total b{font-size:46px}
   .total span{font-size:14px}
   .social-card .handle{font-size:13px}

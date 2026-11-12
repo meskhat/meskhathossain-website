@@ -10,6 +10,8 @@ const SOCIAL = {
 };
 /* Lifetime video views (YouTube channel total from the channel's About panel) */
 const VIEWS = { youtube: 1630314 };
+/* Facebook views, last 90 days (Creator Dashboard: profile 5,207 + Human Changer page 96) */
+const FB90 = { views: 5303, period: "Aug 14 – Nov 11, 2026" };
 
 function fmt(n){
   if (n >= 1e6) return (n/1e6).toFixed(n % 1e6 === 0 ? 0 : 1).replace(/\.0$/,'') + 'M';
@@ -42,6 +44,8 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('[data-social="updated"]').forEach(el => el.textContent = SOCIAL.updated);
   const totalViews = Object.values(VIEWS).reduce((a, b) => a + b, 0);
   document.querySelectorAll('[data-views="total"]').forEach(el => { el.dataset.count = totalViews; el.dataset.fmt = '1'; el.dataset.plus = '1'; el.textContent = fmt(totalViews) + '+'; });
+  document.querySelectorAll('[data-views="fb90"]').forEach(el => { el.dataset.count = FB90.views; el.dataset.fmt = '1'; el.dataset.plus = '1'; el.textContent = fmt(FB90.views) + '+'; });
+  document.querySelectorAll('[data-views="fb90period"]').forEach(el => el.textContent = FB90.period);
 
   /* count-up + reveal */
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
