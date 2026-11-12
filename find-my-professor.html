@@ -13,7 +13,7 @@ gtag('js',new Date());
 window.addEventListener('load',function(){setTimeout(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtm.js?id=GTM-WNW99MJ5';document.head.appendChild(s);},1200);});
 </script>
 <title>Find My Professor: Supervisors for Research Master's in Canada | Meskhat Hossain</title>
-<meta name="description" content="Search active researchers at Canadian universities by field and research topic to find a supervisor for a research-based master's. Starting with Nova Scotia's DLI-listed universities.">
+<meta name="description" content="Search active researchers at Canadian universities by field and research topic to find a supervisor for a research-based master's. Covers the top DLI-listed research universities in every province.">
 <link rel="canonical" href="https://www.meskhathossain.com/find-my-professor.html">
 <meta property="og:title" content="Find My Professor: Find a Supervisor for a Research Master's in Canada">
 <meta property="og:description" content="Search professors by field and research topic, see their recent papers, and reach them through official university pages.">
@@ -24,7 +24,7 @@ window.addEventListener('load',function(){setTimeout(function(){var s=document.c
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Fraunces:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Hind+Siliguri:wght@400;600&amp;display=swap">
-<link rel="stylesheet" href="styles.css?v=20261112e">
+<link rel="stylesheet" href="styles.css?v=20261112h">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
  {"@type":"WebPage","name":"Find My Professor: Supervisors for Research Master's in Canada","url":"https://www.meskhathossain.com/find-my-professor.html","isPartOf":{"@id":"https://www.meskhathossain.com/#website"}},
@@ -42,7 +42,7 @@ window.addEventListener('load',function(){setTimeout(function(){var s=document.c
 <header class="site">
   <div class="wrap nav">
     <a href="/" class="logo"><img src="meskhat-profile-640.webp" alt="" width="38" height="38">Meskhat Hossain</a>
-    <nav class="nav-links" id="navLinks"><a href="/">Home</a><a href="/blog.html">Blog</a><a href="/tools.html" class="active">Tools</a><a href="/videos.html">Videos</a><a href="/resources.html">Resources</a><a href="/about.html">About</a><a href="/contact.html">Contact</a></nav>
+    <nav class="nav-links" id="navLinks"><a href="/">Home</a><a href="/blog.html">Blog</a><a href="/find-my-professor.html" class="nav-key active">Find My Professor</a><a href="/tools.html">Tools</a><a href="/videos.html">Videos</a><a href="/resources.html">Resources</a><a href="/about.html">About</a><a href="/contact.html">Contact</a></nav>
     <a class="btn btn-red" href="https://www.youtube.com/@TheHumanChanger?sub_confirmation=1" target="_blank" rel="noopener">Subscribe <span class="arrow">→</span></a>
     <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
@@ -52,17 +52,17 @@ window.addEventListener('load',function(){setTimeout(function(){var s=document.c
   <section class="page-hero" style="padding-bottom:36px">
     <div class="wrap">
       <nav class="crumbs-bar" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/tools.html">Student tools</a> / <span>Find My Professor</span></nav>
-      <span class="eyebrow">New · Pilot: Nova Scotia</span>
+      <span class="eyebrow">New · Top universities in every province</span>
       <h1 class="display">Find my <span class="fade">professor.</span></h1>
       <p class="lead">Search active researchers at Canadian universities by field and topic, see what they're working on now, and reach them through their official university pages. Built to help you find a professor for a research-based master's.</p>
-      <div class="dir-meta"><span><b id="mPeople">…</b>active researchers</span><span><b id="mUnis">6</b>DLI-listed universities</span><span><b id="mDate">…</b>data updated</span></div>
+      <div class="dir-meta"><span><b id="mPeople">…</b>active researchers</span><span><b id="mUnis">…</b>DLI-listed universities</span><span><b id="mDate">…</b>data updated</span></div>
     </div>
   </section>
 
   <section style="padding-top:0">
     <div class="wrap">
       <div class="sv-filters">
-        <label class="sv-f"><span>Province</span><select id="fProv"><option value="ns">Nova Scotia</option><option disabled>More provinces coming soon</option></select></label>
+        <label class="sv-f"><span>Province</span><select id="fProv"><option>Loading…</option></select></label>
         <label class="sv-f"><span>University</span><select id="fUni"><option value="">All universities</option></select></label>
         <label class="sv-f"><span>Field</span><select id="fField"><option value="">All fields</option></select></label>
         <label class="sv-f sv-q"><span>Research topic or name</span><input id="fQ" type="search" placeholder="e.g. machine learning, ocean, nursing, climate"></label>
@@ -75,7 +75,7 @@ window.addEventListener('load',function(){setTimeout(function(){var s=document.c
       <p class="dir-empty" id="svEmpty" hidden>No researchers match. Try a broader topic (e.g. "health" instead of a specific disease) or another university.</p>
 
       <div class="sv-note">
-        <b>How this list is made:</b> researchers with at least 3 papers at the university in the last 3 years, from <a href="https://openalex.org" target="_blank" rel="noopener">OpenAlex</a>, a free, open database of research. It can include adjunct or affiliated researchers and miss people who publish less. It does <b>not</b> show who has funding or open positions: always confirm on the professor's official page and the program's admission page. No emails are stored here; use the official university links to contact professors.
+        <b>How this list is made:</b> for each province, the top DLI-listed universities by research output. Researchers listed have the university as their current affiliation and at least 3 publications in the last 3 years, from <a href="https://openalex.org" target="_blank" rel="noopener">OpenAlex</a>, a free, open database of research. It can include adjunct or affiliated researchers and miss people who publish less. It does <b>not</b> show who has funding or open positions: always confirm on the professor's official page and the program's admission page. No emails are stored here; use the official university links to contact professors.
       </div>
     </div>
   </section>
@@ -117,7 +117,7 @@ window.addEventListener('load',function(){setTimeout(function(){var s=document.c
     <div class="foot-bottom"><span>© <span data-year>2026</span> Meskhat Hossain · The Human Changer</span><span>Not affiliated with IRCC or any university. Research data: OpenAlex (CC0).</span></div>
   </div>
 </footer>
-<script src="main.js?v=20261112e"></script>
-<script src="supervisors.js?v=20261112e"></script>
+<script src="main.js?v=20261112g"></script>
+<script src="supervisors.js?v=20261112g"></script>
 </body>
 </html>

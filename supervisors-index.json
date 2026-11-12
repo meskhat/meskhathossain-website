@@ -1,0 +1,683 @@
+{
+"generated": "2026-11-12",
+"source": "OpenAlex (openalex.org), CC0",
+"min_recent": 3,
+"recent_years": [
+2024,
+2025,
+2026
+],
+"provinces": [
+{
+"name": "Ontario",
+"universities": [
+{
+"short": "Toronto",
+"name": "University of Toronto",
+"site": "utoronto.ca",
+"url": "https://www.utoronto.ca",
+"dli": "O19332746152",
+"file": "sv-toronto.json",
+"count": 10823,
+"built": "2026-11-12"
+},
+{
+"short": "McMaster",
+"name": "McMaster University",
+"site": "mcmaster.ca",
+"url": "https://www.mcmaster.ca",
+"dli": "O19395535729",
+"file": "sv-mcmaster.json",
+"count": 3252,
+"built": "2026-11-12"
+},
+{
+"short": "Western",
+"name": "Western University",
+"site": "uwo.ca",
+"url": "https://www.uwo.ca",
+"dli": "O19375892122",
+"file": "sv-western.json",
+"count": 2885,
+"built": "2026-11-12"
+},
+{
+"short": "Ottawa",
+"name": "University of Ottawa",
+"site": "uottawa.ca",
+"url": "https://www.uottawa.ca",
+"dli": "O19397188593",
+"file": "sv-ottawa.json",
+"count": 3216,
+"built": "2026-11-12"
+},
+{
+"short": "Waterloo",
+"name": "University of Waterloo",
+"site": "uwaterloo.ca",
+"url": "https://uwaterloo.ca",
+"dli": "O19305471522",
+"file": "sv-waterloo.json",
+"count": 2221,
+"built": "2026-11-12"
+},
+{
+"short": "Queen's",
+"name": "Queen's University",
+"site": "queensu.ca",
+"url": "https://www.queensu.ca",
+"dli": "O19376023352",
+"file": "sv-queen-s.json",
+"count": 1920,
+"built": "2026-11-12"
+},
+{
+"short": "Guelph",
+"name": "University of Guelph",
+"site": "uoguelph.ca",
+"url": "https://www.uoguelph.ca",
+"dli": "O19305391192",
+"file": "sv-guelph.json",
+"count": 1277,
+"built": "2026-11-12"
+},
+{
+"short": "York",
+"name": "York University",
+"site": "yorku.ca",
+"url": "https://www.yorku.ca",
+"dli": "O19361109242",
+"file": "sv-york.json",
+"count": 1307,
+"built": "2026-11-12"
+},
+{
+"short": "Carleton",
+"name": "Carleton University",
+"site": "carleton.ca",
+"url": "https://carleton.ca",
+"dli": "O19332687812",
+"file": "sv-carleton.json",
+"count": 1073,
+"built": "2026-11-12"
+},
+{
+"short": "TMU",
+"name": "Toronto Metropolitan University",
+"site": "torontomu.ca",
+"url": "https://www.torontomu.ca",
+"dli": "O19395677651",
+"file": "sv-tmu.json",
+"count": 847,
+"built": "2026-11-12"
+}
+]
+},
+{
+"name": "Quebec",
+"universities": [
+{
+"short": "McGill",
+"name": "McGill University",
+"site": "mcgill.ca",
+"url": "https://www.mcgill.ca",
+"dli": "O19359011033",
+"file": "sv-mcgill.json",
+"count": 5210,
+"built": "2026-11-12"
+},
+{
+"short": "Montréal",
+"name": "Université de Montréal",
+"site": "umontreal.ca",
+"url": "https://www.umontreal.ca",
+"dli": "O19359011045",
+"file": "sv-montreal.json",
+"count": 3679,
+"built": "2026-11-12"
+},
+{
+"short": "Laval",
+"name": "Université Laval",
+"site": "ulaval.ca",
+"url": "https://www.ulaval.ca",
+"dli": "O19359011020",
+"file": "sv-laval.json",
+"count": 2384,
+"built": "2026-11-12"
+},
+{
+"short": "Concordia",
+"name": "Concordia University",
+"site": "concordia.ca",
+"url": "https://www.concordia.ca",
+"dli": "O19359011007",
+"file": "sv-concordia.json",
+"count": 1022,
+"built": "2026-11-12"
+},
+{
+"short": "UQAM",
+"name": "Université du Québec à Montréal",
+"site": "uqam.ca",
+"url": "https://uqam.ca",
+"dli": "O19359011134",
+"file": "sv-uqam.json",
+"count": 940,
+"built": "2026-11-12"
+},
+{
+"short": "Sherbrooke",
+"name": "Université de Sherbrooke",
+"site": "usherbrooke.ca",
+"url": "https://www.usherbrooke.ca",
+"dli": "O19359011083",
+"file": "sv-sherbrooke.json",
+"count": 1296,
+"built": "2026-11-12"
+},
+{
+"short": "Polytechnique",
+"name": "Polytechnique Montréal",
+"site": "polymtl.ca",
+"url": "https://www.polymtl.ca",
+"dli": "O19359011070",
+"file": "sv-polytechnique.json",
+"count": 566,
+"built": "2026-11-12"
+},
+{
+"short": "INRS",
+"name": "Institut national de la recherche scientifique",
+"site": "inrs.ca",
+"url": "https://inrs.ca",
+"dli": "O19359011185",
+"file": "sv-inrs.json",
+"count": 405,
+"built": "2026-11-12"
+},
+{
+"short": "UQTR",
+"name": "Université du Québec à Trois-Rivières",
+"site": "uqtr.ca",
+"url": "https://www.uqtr.ca",
+"dli": "O19359011172",
+"file": "sv-uqtr.json",
+"count": 433,
+"built": "2026-11-12"
+},
+{
+"short": "ÉTS",
+"name": "École de technologie supérieure",
+"site": "etsmtl.ca",
+"url": "https://www.etsmtl.ca",
+"dli": "O19359201210",
+"file": "sv-ets.json",
+"count": 399,
+"built": "2026-11-12"
+}
+]
+},
+{
+"name": "British Columbia",
+"universities": [
+{
+"short": "UBC",
+"name": "University of British Columbia",
+"site": "ubc.ca",
+"url": "https://www.ubc.ca",
+"dli": "O19330231062",
+"file": "sv-ubc.json",
+"count": 6633,
+"built": "2026-11-12"
+},
+{
+"short": "SFU",
+"name": "Simon Fraser University",
+"site": "sfu.ca",
+"url": "https://www.sfu.ca",
+"dli": "O18781994282",
+"file": "sv-sfu.json",
+"count": 1239,
+"built": "2026-11-12"
+},
+{
+"short": "UVic",
+"name": "University of Victoria",
+"site": "uvic.ca",
+"url": "https://www.uvic.ca",
+"dli": "O19280533442",
+"file": "sv-uvic.json",
+"count": 1067,
+"built": "2026-11-12"
+},
+{
+"short": "UBC Okanagan",
+"name": "University of British Columbia (Okanagan)",
+"site": "ok.ubc.ca",
+"url": "https://ok.ubc.ca",
+"dli": "O19330231062",
+"file": "sv-ubc-okanagan.json",
+"count": 517,
+"built": "2026-11-12"
+},
+{
+"short": "UNBC",
+"name": "University of Northern British Columbia",
+"site": "unbc.ca",
+"url": "https://www.unbc.ca",
+"dli": "O19283889692",
+"file": "sv-unbc.json",
+"count": 170,
+"built": "2026-11-12"
+},
+{
+"short": "TRU",
+"name": "Thompson Rivers University",
+"site": "tru.ca",
+"url": "https://www.tru.ca",
+"dli": "O19395299610",
+"file": "sv-tru.json",
+"count": 125,
+"built": "2026-11-12"
+},
+{
+"short": "UFV",
+"name": "University of the Fraser Valley",
+"site": "ufv.ca",
+"url": "https://www.ufv.ca",
+"dli": "O19395299642",
+"file": "sv-ufv.json",
+"count": 59,
+"built": "2026-11-12"
+},
+{
+"short": "Royal Roads",
+"name": "Royal Roads University",
+"site": "royalroads.ca",
+"url": "https://www.royalroads.ca",
+"dli": "O19330635812",
+"file": "sv-royal-roads.json",
+"count": 46,
+"built": "2026-11-12"
+},
+{
+"short": "Trinity Western",
+"name": "Trinity Western University",
+"site": "twu.ca",
+"url": "https://www.twu.ca",
+"dli": "O19347055392",
+"file": "sv-trinity-western.json",
+"count": 42,
+"built": "2026-11-12"
+},
+{
+"short": "VIU",
+"name": "Vancouver Island University",
+"site": "viu.ca",
+"url": "https://www.viu.ca",
+"dli": "O19395299688",
+"file": "sv-viu.json",
+"count": 45,
+"built": "2026-11-12"
+}
+]
+},
+{
+"name": "Alberta",
+"universities": [
+{
+"short": "Alberta",
+"name": "University of Alberta",
+"site": "ualberta.ca",
+"url": "https://www.ualberta.ca",
+"dli": "O19257171832",
+"file": "sv-alberta.json",
+"count": 4317,
+"built": "2026-11-12"
+},
+{
+"short": "Calgary",
+"name": "University of Calgary",
+"site": "ucalgary.ca",
+"url": "https://www.ucalgary.ca",
+"dli": "O18886830282",
+"file": "sv-calgary.json",
+"count": 3874,
+"built": "2026-11-12"
+},
+{
+"short": "Lethbridge",
+"name": "University of Lethbridge",
+"site": "ulethbridge.ca",
+"url": "https://www.ulethbridge.ca",
+"dli": "O18776949622",
+"file": "sv-lethbridge.json",
+"count": 236,
+"built": "2026-11-12"
+},
+{
+"short": "Athabasca",
+"name": "Athabasca University",
+"site": "athabascau.ca",
+"url": "https://www.athabascau.ca",
+"dli": "O19092373272",
+"file": "sv-athabasca.json",
+"count": 111,
+"built": "2026-11-12"
+},
+{
+"short": "Mount Royal",
+"name": "Mount Royal University",
+"site": "mtroyal.ca",
+"url": "https://www.mtroyal.ca",
+"dli": "O18761482032",
+"file": "sv-mount-royal.json",
+"count": 112,
+"built": "2026-11-12"
+},
+{
+"short": "MacEwan",
+"name": "MacEwan University",
+"site": "macewan.ca",
+"url": "https://www.macewan.ca",
+"dli": "O19092022262",
+"file": "sv-macewan.json",
+"count": 94,
+"built": "2026-11-12"
+},
+{
+"short": "St. Mary's Calgary",
+"name": "St. Mary's University (Calgary)",
+"site": "stmu.ca",
+"url": "https://stmu.ca",
+"dli": "O19273782872",
+"file": "sv-st-mary-s-calgary.json",
+"count": 29,
+"built": "2026-11-12"
+},
+{
+"short": "Concordia Edmonton",
+"name": "Concordia University of Edmonton",
+"site": "concordia.ab.ca",
+"url": "https://concordia.ab.ca",
+"dli": "O19073475522",
+"file": "sv-concordia-edmonton.json",
+"count": 33,
+"built": "2026-11-12"
+},
+{
+"short": "King's (Edmonton)",
+"name": "The King's University",
+"site": "kingsu.ca",
+"url": "https://www.kingsu.ca",
+"dli": "O18713250142",
+"file": "sv-king-s-edmonton.json",
+"count": 16,
+"built": "2026-11-12"
+},
+{
+"short": "AUArts",
+"name": "Alberta University of the Arts",
+"site": "auarts.ca",
+"url": "https://www.auarts.ca",
+"dli": "O18760756062",
+"file": "sv-auarts.json",
+"count": 6,
+"built": "2026-11-12"
+}
+]
+},
+{
+"name": "Nova Scotia",
+"universities": [
+{
+"short": "Dalhousie",
+"name": "Dalhousie University",
+"site": "dal.ca",
+"url": "https://www.dal.ca",
+"dli": "O19209939282",
+"file": "sv-dalhousie.json",
+"count": 2034,
+"built": "2026-11-12"
+},
+{
+"short": "Saint Mary's",
+"name": "Saint Mary's University",
+"site": "smu.ca",
+"url": "https://www.smu.ca",
+"dli": "O19021279692",
+"file": "sv-saint-mary-s.json",
+"count": 152,
+"built": "2026-11-12"
+},
+{
+"short": "StFX",
+"name": "St. Francis Xavier University",
+"site": "stfx.ca",
+"url": "https://www.stfx.ca",
+"dli": "O19391556899",
+"file": "sv-stfx.json",
+"count": 121,
+"built": "2026-11-12"
+},
+{
+"short": "Acadia",
+"name": "Acadia University",
+"site": "acadiau.ca",
+"url": "https://www2.acadiau.ca",
+"dli": "O19391556792",
+"file": "sv-acadia.json",
+"count": 88,
+"built": "2026-11-12"
+},
+{
+"short": "Mount Saint Vincent",
+"name": "Mount Saint Vincent University",
+"site": "msvu.ca",
+"url": "https://www.msvu.ca",
+"dli": "O19301947442",
+"file": "sv-mount-saint-vincent.json",
+"count": 72,
+"built": "2026-11-12"
+},
+{
+"short": "Cape Breton",
+"name": "Cape Breton University",
+"site": "cbu.ca",
+"url": "https://www.cbu.ca",
+"dli": "O19391556824",
+"file": "sv-cape-breton.json",
+"count": 77,
+"built": "2026-11-12"
+},
+{
+"short": "Sainte-Anne",
+"name": "Université Sainte-Anne",
+"site": "usainteanne.ca",
+"url": "https://www.usainteanne.ca",
+"dli": "O19391556726",
+"file": "sv-sainte-anne.json",
+"count": 6,
+"built": "2026-11-12"
+},
+{
+"short": "King's College",
+"name": "University of King's College",
+"site": "ukings.ca",
+"url": "https://ukings.ca",
+"dli": "O19391556768",
+"file": "sv-king-s-college.json",
+"count": 4,
+"built": "2026-11-12"
+},
+{
+"short": "NSCAD",
+"name": "NSCAD University",
+"site": "nscad.ca",
+"url": "https://nscad.ca",
+"dli": "O19021269652",
+"file": "sv-nscad.json",
+"count": 0,
+"built": "2026-11-12"
+}
+]
+},
+{
+"name": "New Brunswick",
+"universities": [
+{
+"short": "UNB",
+"name": "University of New Brunswick",
+"site": "unb.ca",
+"url": "https://www.unb.ca",
+"dli": "O19348802512"
+},
+{
+"short": "Moncton",
+"name": "Université de Moncton",
+"site": "umoncton.ca",
+"url": "https://www.umoncton.ca",
+"dli": "O19391556532"
+},
+{
+"short": "Mount Allison",
+"name": "Mount Allison University",
+"site": "mta.ca",
+"url": "https://mta.ca",
+"dli": "O19273922302"
+},
+{
+"short": "St. Thomas",
+"name": "St. Thomas University",
+"site": "stu.ca",
+"url": "https://www.stu.ca",
+"dli": "O19391556376"
+},
+{
+"short": "Crandall",
+"name": "Crandall University",
+"site": "crandallu.ca",
+"url": "https://www.crandallu.ca",
+"dli": "O19391275763"
+},
+{
+"short": "Kingswood",
+"name": "Kingswood University",
+"site": "kingswood.edu",
+"url": "https://www.kingswood.edu",
+"dli": "O19348776942"
+}
+]
+},
+{
+"name": "Manitoba",
+"universities": [
+{
+"short": "Manitoba",
+"name": "University of Manitoba",
+"site": "umanitoba.ca",
+"url": "https://umanitoba.ca",
+"dli": "O19091528512"
+},
+{
+"short": "Winnipeg",
+"name": "The University of Winnipeg",
+"site": "uwinnipeg.ca",
+"url": "https://www.uwinnipeg.ca",
+"dli": "O19147986012"
+},
+{
+"short": "Brandon",
+"name": "Brandon University",
+"site": "brandonu.ca",
+"url": "https://www.brandonu.ca",
+"dli": "O19201298932"
+},
+{
+"short": "Saint-Boniface",
+"name": "Université de Saint-Boniface",
+"site": "ustboniface.ca",
+"url": "https://ustboniface.ca",
+"dli": "O19126670302"
+},
+{
+"short": "CMU",
+"name": "Canadian Mennonite University",
+"site": "cmu.ca",
+"url": "https://www.cmu.ca",
+"dli": "O19021102272"
+},
+{
+"short": "UCN",
+"name": "University College of the North",
+"site": "ucn.ca",
+"url": "https://www.ucn.ca",
+"dli": "O19283880122"
+},
+{
+"short": "Booth",
+"name": "Booth University College",
+"site": "boothuc.ca",
+"url": "https://www.boothuc.ca",
+"dli": "O19147992362"
+}
+]
+},
+{
+"name": "Saskatchewan",
+"universities": [
+{
+"short": "Saskatchewan",
+"name": "University of Saskatchewan",
+"site": "usask.ca",
+"url": "https://www.usask.ca",
+"dli": "O19425660421"
+},
+{
+"short": "Regina",
+"name": "University of Regina",
+"site": "uregina.ca",
+"url": "https://www.uregina.ca",
+"dli": "O19425660270"
+}
+]
+},
+{
+"name": "Newfoundland and Labrador",
+"universities": [
+{
+"short": "Memorial",
+"name": "Memorial University of Newfoundland",
+"site": "mun.ca",
+"url": "https://www.mun.ca",
+"dli": "O19440995346"
+}
+]
+},
+{
+"name": "Prince Edward Island",
+"universities": [
+{
+"short": "UPEI",
+"name": "University of Prince Edward Island",
+"site": "upei.ca",
+"url": "https://www.upei.ca",
+"dli": "O19220071452"
+}
+]
+},
+{
+"name": "Yukon",
+"universities": [
+{
+"short": "Yukon",
+"name": "Yukon University",
+"site": "yukonu.ca",
+"url": "https://www.yukonu.ca",
+"dli": "O19604209351"
+}
+]
+}
+]
+}
