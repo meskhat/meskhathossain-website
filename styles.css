@@ -606,6 +606,15 @@ form.kit-form{background:transparent;padding:0;border-radius:0;gap:12px;margin-t
   .tool-card{border:0;padding:0}
 }
 
+/* Cookie consent */
+.consent{position:fixed;left:16px;right:16px;bottom:16px;z-index:80;max-width:720px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:0 18px 50px rgba(22,22,27,.18);padding:16px 18px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;animation:cin .35s ease}
+.consent p{flex:1 1 300px;font-size:14.5px;color:var(--ink-2);margin:0}
+.consent p a{text-decoration:underline;text-underline-offset:3px}
+.consent-btns{display:flex;gap:10px}
+.consent .btn{padding:10px 18px;font-size:14.5px}
+@keyframes cin{from{transform:translateY(20px);opacity:0}}
+@media print{.consent{display:none}}
+
 /* Above-the-fold content shows instantly (faster Largest Contentful Paint) */
 .hero .reveal,.page-hero .reveal{opacity:1;transform:none;transition:none}
 

@@ -5,6 +5,8 @@
     set(k, v){ try { localStorage.setItem(k, JSON.stringify(v)); } catch(e){} },
     del(k){ try { localStorage.removeItem(k); } catch(e){} }
   };
+  const T = (tool, action) => { if (window.mhTrack) mhTrack('tool_use', {tool: tool, action: action}); };
+  const once = {};
   const cad = n => 'CA$' + Math.round(n).toLocaleString('en-CA');
   const bdt = n => '৳' + Math.round(n).toLocaleString('en-IN');
 
@@ -32,7 +34,7 @@
       const data = {}; [...monthlyKeys,'tuition','rate'].forEach(k => { if (form.elements[k].value) data[k] = form.elements[k].value; });
       store.set(KEY, data);
     }
-    form.addEventListener('input', calc);
+    form.addEventListener('input', () => { calc(); if (!once.b){ once.b = 1; T('budget_calculator','start'); } });
     form.addEventListener('reset', () => setTimeout(() => { store.del(KEY); document.getElementById('rateInfo').textContent = 'Enter your own rate, or load the latest rate from a public exchange-rate service.'; calc(); }, 0));
     document.getElementById('getRate').addEventListener('click', async e => {
       const btn = e.currentTarget, info = document.getElementById('rateInfo');
@@ -40,7 +42,7 @@
       try {
         const r = await fetch('https://open.er-api.com/v6/latest/CAD'); const j = await r.json();
         if (j.result !== 'success' || !j.rates || !j.rates.BDT) throw new Error('no rate');
-        form.elements.rate.value = j.rates.BDT.toFixed(2);
+        form.elements.rate.value = j.rates.BDT.toFixed(2); T('budget_calculator','live_rate');
         const when = new Date(j.time_last_update_utc);
         info.innerHTML = 'Live rate: 1 CAD = ' + j.rates.BDT.toFixed(2) + ' BDT · source: <a href="https://www.exchangerate-api.com" target="_blank" rel="noopener">ExchangeRate-API</a> · updated ' + when.toLocaleString('en-CA', {dateStyle:'medium', timeStyle:'short'}) + ' (local time). Banks and transfer services use their own rates.';
         calc();
@@ -85,9 +87,9 @@
       document.getElementById('clBar').style.width = pct + '%';
       document.getElementById('clPct').textContent = pct + '% · ' + done + '/' + total;
     }
-    list.addEventListener('change', e => { if (e.target.dataset.id){ state[e.target.dataset.id] = e.target.checked; store.set(KEY, state); update(); } });
+    list.addEventListener('change', e => { if (e.target.dataset.id){ if (!once.c){ once.c = 1; T('document_checklist','tick'); } state[e.target.dataset.id] = e.target.checked; store.set(KEY, state); update(); } });
     document.getElementById('clReset').addEventListener('click', () => { list.querySelectorAll('input').forEach(i => i.checked = false); Object.keys(state).forEach(k => delete state[k]); store.del(KEY); update(); });
-    document.getElementById('clPrint').addEventListener('click', () => { document.body.classList.add('print-checklist'); window.print(); setTimeout(() => document.body.classList.remove('print-checklist'), 500); });
+    document.getElementById('clPrint').addEventListener('click', () => { T('document_checklist','print'); document.body.classList.add('print-checklist'); window.print(); setTimeout(() => document.body.classList.remove('print-checklist'), 500); });
     update();
   }
 
@@ -140,7 +142,7 @@
         const d = new Date(y, m - 1 - monthsBefore, 1);
         st.dates[id] = d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2,'0') + '-01';
       });
-      st.start = startInput.value; store.set(KEY, st); render();
+      st.start = startInput.value; store.set(KEY, st); render(); T('planning_timeline','suggest_dates');
     });
     document.getElementById('tlReset').addEventListener('click', () => { st.start=''; st.dates={}; st.done={}; startInput.value=''; store.del(KEY); render(); });
     render();

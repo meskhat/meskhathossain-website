@@ -29,6 +29,9 @@ const POSTS = [
   {slug:"canada-student-proof-of-funds-2026.html", title:"Proof of funds for a Canadian study permit in 2026–27", cat:"Money", date:"2026-11-12", updated:"2026-11-12", mins:6, cover:"c1", coverText:"How much money<br>do you need?", excerpt:"The new IRCC living-cost amounts, what they cover, and how to plan your budget from Bangladesh."}
 ];
 
+/* ===== Analytics helper (GA4 via Google tag; respects consent) ===== */
+window.mhTrack = function(name, params){ try { if (typeof gtag === 'function') gtag('event', name, params || {}); } catch(e){} };
+
 function fmt(n){
   if (n >= 1e6) return (n/1e6).toFixed(n % 1e6 === 0 ? 0 : 1).replace(/\.0$/,'') + 'M';
   if (n >= 1e3) return (n/1e3).toFixed(n >= 1e4 ? 0 : 1).replace(/\.0$/,'') + 'K';
@@ -36,6 +39,24 @@ function fmt(n){
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+  /* ===== Cookie consent banner ===== */
+  let choice = null; try { choice = localStorage.getItem('mh_consent'); } catch(e){}
+  const setConsent = v => {
+    try { localStorage.setItem('mh_consent', v); } catch(e){}
+    if (typeof gtag === 'function') gtag('consent', 'update', {analytics_storage: v});
+    const b = document.getElementById('consentBar'); if (b) b.remove();
+  };
+  const showBanner = () => {
+    if (document.getElementById('consentBar')) return;
+    const bar = document.createElement('div'); bar.id = 'consentBar'; bar.className = 'consent'; bar.setAttribute('role', 'region'); bar.setAttribute('aria-label', 'Cookie choice');
+    bar.innerHTML = '<p>I use Google Analytics cookies to see which guides help students most. No ads, no selling data. <a href="/privacy.html">Privacy</a></p><div class="consent-btns"><button type="button" class="btn btn-outline" data-c="denied">Decline</button><button type="button" class="btn btn-solid" data-c="granted">Accept</button></div>';
+    bar.addEventListener('click', e => { const c = e.target.closest('[data-c]'); if (c) setConsent(c.dataset.c); });
+    document.body.appendChild(bar);
+  };
+  if (!choice) setTimeout(showBanner, 900);
+  const pr = document.getElementById('privacyReset');
+  if (pr) pr.addEventListener('click', () => { try { localStorage.removeItem('mh_consent'); } catch(e){} showBanner(); });
+
   /* header + mobile menu */
   const hdr = document.querySelector('header.site');
   if (hdr) addEventListener('scroll', () => hdr.classList.toggle('scrolled', scrollY > 10), {passive:true});
@@ -123,7 +144,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
       document.getElementById('blogEmpty').hidden = n > 0;
     };
-    q.addEventListener('input', apply);
+    let st; q.addEventListener('input', () => { apply(); clearTimeout(st); if (q.value.trim().length > 2) st = setTimeout(() => mhTrack('search', {search_term: q.value.trim().slice(0, 60), area: 'blog'}), 1200); });
     fbar.addEventListener('click', e => { const b = e.target.closest('[data-bcat]'); if (!b) return; cat = b.dataset.bcat; fbar.querySelectorAll('.chip').forEach(x => x.classList.toggle('active', x === b)); apply(); });
   }
 
@@ -181,6 +202,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) return;
       const body = new URLSearchParams(); body.append(SIGNUP.email, email); body.append(SIGNUP.name, name);
       const btn = f.querySelector('button'); if (btn) { btn.disabled = true; btn.textContent = 'Sending…'; }
+      mhTrack('sign_up', {method: 'checklist_form', page_path: location.pathname});
       fetch(SIGNUP.action, {method:'POST', mode:'no-cors', body}).catch(() => {}).finally(() => {
         f.hidden = true;
         const ok = f.parentElement.querySelector('.signup-ok'); if (ok) ok.hidden = false;
