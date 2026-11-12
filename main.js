@@ -8,6 +8,8 @@ const SOCIAL = {
   fbpage:    { count: 965,   handle: "Human Changer",     url: "https://www.facebook.com/Thehumanchanger" },
   instagram: { count: 0,     handle: "@meskhat_hossain",  url: "https://www.instagram.com/meskhat_hossain" } // set count when known
 };
+/* Lifetime video views (YouTube channel total from the channel's About panel) */
+const VIEWS = { youtube: 1630314 };
 
 function fmt(n){
   if (n >= 1e6) return (n/1e6).toFixed(n % 1e6 === 0 ? 0 : 1).replace(/\.0$/,'') + 'M';
@@ -38,6 +40,8 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   document.querySelectorAll('[data-social="total"]').forEach(el => { el.dataset.count = total; el.dataset.fmt = '1'; el.dataset.plus = '1'; el.textContent = fmt(total) + '+'; });
   document.querySelectorAll('[data-social="updated"]').forEach(el => el.textContent = SOCIAL.updated);
+  const totalViews = Object.values(VIEWS).reduce((a, b) => a + b, 0);
+  document.querySelectorAll('[data-views="total"]').forEach(el => { el.dataset.count = totalViews; el.dataset.fmt = '1'; el.dataset.plus = '1'; el.textContent = fmt(totalViews) + '+'; });
 
   /* count-up + reveal */
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;

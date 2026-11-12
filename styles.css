@@ -90,7 +90,10 @@ header.site.scrolled{border-color:var(--line)}
 .social-band{background:var(--ink);color:#fff;border-radius:36px;padding:70px 56px;position:relative;overflow:hidden}
 .social-band .label{color:#ff8a7e}
 .social-top{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap;position:relative;z-index:1}
-.total b{font-family:var(--display);font-weight:400;font-size:clamp(70px,11vw,140px);line-height:.9;display:block}
+.totals{display:flex;gap:48px;flex-wrap:wrap}
+.totals .total+.total{padding-left:48px;border-left:1px solid rgba(255,255,255,.18)}
+.totals-note{position:relative;z-index:1;color:#8d8d99;font-size:14px;font-style:italic;margin-top:18px}
+.total b{font-family:var(--display);font-weight:400;font-size:clamp(60px,8.5vw,120px);line-height:.9;display:block}
 .total span{color:#b7b7c2;font-style:italic}
 .social-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:48px;position:relative;z-index:1}
 .social-grid>*{min-width:0}
@@ -291,6 +294,10 @@ footer.site{background:var(--ink);color:#c9c9d2;padding:70px 0 34px;margin-top:0
   .social-grid{grid-template-columns:1fr 1fr;gap:12px}
   .social-card{padding:16px}
   .social-band{padding:44px 18px}
+  .totals{display:grid;grid-template-columns:1fr 1fr;gap:0;width:100%}
+  .totals .total+.total{padding-left:18px}
+  .total b{font-size:46px}
+  .total span{font-size:14px}
   .social-card .handle{font-size:13px}
   .social-card b{font-size:32px}
   .blob{transform:scale(.45);opacity:.7;animation:none}
