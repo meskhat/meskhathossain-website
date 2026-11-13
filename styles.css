@@ -783,6 +783,7 @@ a.pl:hover{opacity:.7}
 .nav-links .nav-dd-menu a{padding:9px 12px;border-radius:9px;white-space:nowrap}
 .nav-links .nav-dd-menu a::after{display:none}
 .nav-links .nav-dd-menu a:hover{background:var(--soft)}
+.nav-dd-sep{height:1px;background:var(--line);margin:6px 8px}
 .sch-switch{display:flex;width:fit-content;max-width:100%;gap:4px;background:var(--soft);border:1px solid var(--line);border-radius:999px;padding:4px;margin:4px auto 22px}
 .sch-switch a{padding:7px 16px;border-radius:999px;font-size:14.5px;color:var(--ink-2)}
 .sch-switch a.on{background:var(--ink);color:#fff}
@@ -860,3 +861,6 @@ a.pl:hover{opacity:.7}
 .sch-no b{font-style:normal;color:var(--ink-2)}
 @media (max-width:960px){.sch-keys{grid-template-columns:minmax(0,1fr)}}
 @media (max-width:600px){.sch-awards li{flex-direction:column;gap:4px}.sch-val{text-align:left;max-width:none}}
+a.sch-tag{text-decoration:none;font-weight:600;cursor:pointer;transition:filter .2s,box-shadow .2s}
+a.sch-tag:hover{filter:brightness(.95);box-shadow:0 0 0 2px currentColor inset}
+a.sch-tag:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
