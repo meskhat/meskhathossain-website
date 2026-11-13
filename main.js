@@ -65,6 +65,13 @@ document.addEventListener('DOMContentLoaded', () => {
     menuBtn.addEventListener('click', () => { const o = links.classList.toggle('open'); menuBtn.setAttribute('aria-expanded', o); });
     links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('open')));
   }
+  /* dropdown menus (Find My Scholarship) */
+  document.querySelectorAll('.nav-dd').forEach(dd => {
+    const btn = dd.querySelector('.nav-dd-btn');
+    btn.addEventListener('click', e => { e.stopPropagation(); const o = dd.classList.toggle('open'); btn.setAttribute('aria-expanded', o); });
+    dd.addEventListener('keydown', e => { if (e.key === 'Escape'){ dd.classList.remove('open'); btn.setAttribute('aria-expanded', false); btn.focus(); } });
+  });
+  document.addEventListener('click', e => document.querySelectorAll('.nav-dd.open').forEach(dd => { if (!dd.contains(e.target)){ dd.classList.remove('open'); dd.querySelector('.nav-dd-btn').setAttribute('aria-expanded', false); } }));
   document.querySelectorAll('[data-year]').forEach(el => el.textContent = new Date().getFullYear());
 
   /* social numbers */
