@@ -864,3 +864,32 @@ a.pl:hover{opacity:.7}
 a.sch-tag{text-decoration:none;font-weight:600;cursor:pointer;transition:filter .2s,box-shadow .2s}
 a.sch-tag:hover{filter:brightness(.95);box-shadow:0 0 0 2px currentColor inset}
 a.sch-tag:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+
+/* ===== Find My Scholarship tool ===== */
+.sc-filters{grid-template-columns:1fr 1fr 1.4fr 1.3fr}
+.sc-filters .sv-q{grid-column:1/-1}
+.sc-levels{display:flex;flex-wrap:wrap;gap:6px;margin-top:18px}
+.sc-levels button{font:15px var(--serif);padding:8px 18px;border-radius:999px;border:1.5px solid var(--line);background:#fff;color:var(--ink-2);cursor:pointer;transition:all .2s}
+.sc-levels button:hover{border-color:var(--ink)}
+.sc-levels button.on{background:var(--ink);border-color:var(--ink);color:#fff}
+.sc-level{display:inline-block;font-family:var(--display);text-transform:uppercase;letter-spacing:.06em;font-size:11px;padding:3px 9px;border-radius:999px;margin-bottom:8px;background:var(--blush);color:var(--red-dark)}
+.sc-level.master{background:var(--blue-soft);color:#24467a}
+.sc-level.phd{background:var(--gold);color:#6b4a0c}
+.sc-val{flex:none;max-width:44%;text-align:right;font-weight:600;font-size:15px;line-height:1.3;background:var(--green-soft);color:var(--green);padding:6px 12px;border-radius:12px}
+.sc-val.none{background:var(--soft);color:var(--muted);font-weight:500;font-size:13.5px}
+.sc-note{font-size:14.5px;color:var(--ink-2)}
+.sc-facts{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.sc-type{font-size:12.5px;padding:4px 10px;border-radius:999px;font-weight:600;cursor:help}
+.sc-type.auto{background:var(--green-soft);color:var(--green)}
+.sc-type.apply{background:var(--blue-soft);color:#24467a}
+.sc-type.check{background:var(--gold);color:#6b4a0c}
+.sc-dl{font-size:13px;color:var(--ink-2);background:var(--soft);border:1px solid var(--line);padding:3px 10px;border-radius:999px}
+.sc-dl.soon{background:var(--blush);border-color:var(--red-soft);color:var(--red-dark)}
+.sc-dl.closed{color:var(--muted);text-decoration:line-through}
+.sc-how{font-size:14px;color:var(--ink-2);margin-top:8px}
+.sc-uniinfo{display:grid;gap:12px;margin-bottom:18px}
+.sc-uniinfo>div{background:var(--soft);border:1px solid var(--line);border-radius:18px;padding:18px 22px}
+.sc-uniinfo h3{font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:20px;margin-bottom:6px}
+.sc-uniinfo p{font-size:14.5px;color:var(--ink-2);margin-bottom:8px}
+@media (max-width:960px){.sc-filters{grid-template-columns:1fr 1fr}}
+@media (max-width:600px){.sc-filters{grid-template-columns:minmax(0,1fr)}.sc-val{max-width:none;text-align:left;align-self:flex-start}}
